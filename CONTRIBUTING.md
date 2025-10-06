@@ -1,6 +1,13 @@
-# Contribution Guidelines
+## Our Contribution Process (Please Read!)
 
-We are excited to have you contribute! This guide will walk you through the process.
+To ensure a fair and organized process for everyone, we follow a "First-Come, First-Served" system.
+
+1.  **Claim an Issue:** Find an issue you want to work on and leave a comment asking to be assigned (e.g., "I'll take this one!" or "Please assign this to me").
+2.  **Wait for Assignment:** Please wait for a maintainer to assign the issue to you before you start working. This prevents multiple people from working on the same thing. We will assign it to the first person who commented.
+3.  **Submit a Pull Request:** Once you are assigned, you have **3 days** to submit a pull request. If there's no activity after 3 days, the issue will be un-assigned and become available for someone else to claim.
+4.  **Link Your PR:** When you create your pull request, please link it to the issue you are solving.
+
+Pull requests submitted for issues that were not claimed or were assigned to someone else will be closed.
 
 ## Step-by-Step Contribution Workflow
 
