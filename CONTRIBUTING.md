@@ -49,6 +49,22 @@ Pull requests submitted for issues that were not claimed or were assigned to som
     * In the description, link to the issue you are solving by writing `Closes #issue-number`.
     * Submit the PR!
 
+## Description
+
+A brief, one or two-sentence summary of the changes you've made.
+
+## Changes Made
+
+A bulleted list of the specific changes. For example:
+    * Added a new file: algorithms/searching/binary_search/python/binary_search.py
+    * Implemented the Binary Search algorithm.
+    * Included Time and Space Complexity analysis.
+
+## Related Issue
+
+Please link the issue that this PR is solving. For example:
+Closes #17
+
 ## Review Process
 
 Please note that the project maintainer (@YourUsername) will be automatically added as a reviewer to all pull requests. We will do our best to review your contribution within 48 hours. Thank you for your patience!
