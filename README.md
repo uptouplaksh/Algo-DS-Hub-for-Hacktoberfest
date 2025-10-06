@@ -38,7 +38,7 @@ Follow these steps to set up the repository locally and start contributing:
 
 2. **Example: Cloning this repository**  
    For this project, you would run:
-    # Example: git clone https://github.com/uptouplaksh/Algo-DS-Hub-for-Hacktoberfest.git
+    Example: git clone https://github.com/uptouplaksh/Algo-DS-Hub-for-Hacktoberfest.git
 
 3. **Navigate into the project folder** 
    cd Algo-DS-Hub-for-Hacktoberfest
