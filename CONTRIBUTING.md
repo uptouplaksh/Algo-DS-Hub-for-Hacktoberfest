@@ -56,9 +56,9 @@ A brief, one or two-sentence summary of the changes you've made.
 ## Changes Made
 
 A bulleted list of the specific changes. For example:
-    * Added a new file: algorithms/searching/binary_search/python/binary_search.py
-    * Implemented the Binary Search algorithm.
-    * Included Time and Space Complexity analysis.
+1. Added a new file: algorithms/searching/binary_search/python/binary_search.py
+2. Implemented the Binary Search algorithm.
+3. Included Time and Space Complexity analysis.
 
 ## Related Issue
 
