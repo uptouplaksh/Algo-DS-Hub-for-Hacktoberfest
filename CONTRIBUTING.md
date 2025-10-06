@@ -49,4 +49,6 @@ Pull requests submitted for issues that were not claimed or were assigned to som
     * In the description, link to the issue you are solving by writing `Closes #issue-number`.
     * Submit the PR!
 
-Thank you for your contribution! We will review it as soon as possible.
+## Review Process
+
+Please note that the project maintainer (@YourUsername) will be automatically added as a reviewer to all pull requests. We will do our best to review your contribution within 48 hours. Thank you for your patience!
