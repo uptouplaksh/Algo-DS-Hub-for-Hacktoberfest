@@ -1,5 +1,3 @@
-# algorithms/tree/max_depth/python/max_depth.py
-
 class Node:
     """Binary Tree Node class."""
     def __init__(self, value=0, left=None, right=None):
