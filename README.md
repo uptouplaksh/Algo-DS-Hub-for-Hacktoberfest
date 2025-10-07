@@ -2,7 +2,10 @@
 
 [![Hacktoberfest](https://img.shields.io/badge/Hacktoberfest-2025-orange?style=for-the-badge)](https://hacktoberfest.com/)
 
-Welcome to the Algo & DS Hub! This repository is a community-driven collection of common algorithms and data structures implemented in various programming languages. It's a resource for learning and a place for developers to make their first meaningful open-source contributions.
+Welcome to the Open-Source-DS-Algo! This repository is a community-driven collection of common algorithms and data structures implemented in various programming languages. It's a resource for learning and a place for developers to make their first meaningful open-source contributions.
+
+## 🌟 Project Goals
+The mission of this repository is to become a high-quality, community-curated resource for learning fundamental algorithms and data structures. While we enthusiastically participate in events like Hacktoberfest, our primary goal is to create a lasting educational tool for developers of all skill levels. We are committed to maintaining a high standard of quality for all contributions.
 
 ## 🎃 Your Guide to Contributing for Hacktoberfest
 
