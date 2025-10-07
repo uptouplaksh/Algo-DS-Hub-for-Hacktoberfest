@@ -61,7 +61,13 @@ function PreOrderTraversalIterative(root) {
     const items = new Stack();
     items.push(root);
     while(!items.isEmpty()) {
-        
+        let node = items.pop();
+        if(node === null){
+            continue;
+        }
+        node.printNode();
+        items.push(node.right);
+        items.push(node.left);
     }
 
 }
