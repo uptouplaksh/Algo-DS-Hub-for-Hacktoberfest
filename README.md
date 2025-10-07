@@ -13,7 +13,33 @@ Contributions are what make the open-source community such an amazing place to l
 
 This project was built to be a welcoming and organized space for developers to make their first meaningful open-source contributions. We have a detailed guide on how to get started, including our folder structure, coding standards, and the entire pull request workflow.
 
+HEAD
 👉 **To get started, please read our [Contributing Guidelines (CONTRIBUTING.md)](CONTRIBUTING.md)!**
+
+**Pull requests that do not follow these guidelines will be marked as `invalid` and closed.**
+
+### Required Folder Structure
+
+Your contribution **MUST** follow this structure to be accepted.
+
+```
+/data_structures
+    /LinkedList
+        /python
+            /singly_linked_list.py
+        /javascript
+            /SinglyLinkedList.js
+/algorithms
+    /sorting
+        /bubble_sort
+            /c_plus_plus
+                /bubble_sort.cpp
+```
+
+### How to Get Started
+
+Ready to contribute? Please read our official [**Contributing Guidelines (CONTRIBUTING.md)**](CONTRIBUTING.md) for a full step-by-step tutorial on how to submit your work.
+contributor/Post-order-traversal
 
 ## License
 
