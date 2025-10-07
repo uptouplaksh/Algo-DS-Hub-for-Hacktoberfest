@@ -1,6 +1,13 @@
-# Contribution Guidelines
+## Our Contribution Process (Please Read!)
 
-We are excited to have you contribute! This guide will walk you through the process.
+To ensure a fair and organized process for everyone, we follow a "First-Come, First-Served" system.
+
+1.  **Claim an Issue:** Find an issue you want to work on and leave a comment asking to be assigned (e.g., "I'll take this one!" or "Please assign this to me").
+2.  **Wait for Assignment:** Please wait for a maintainer to assign the issue to you before you start working. This prevents multiple people from working on the same thing. We will assign it to the first person who commented.
+3.  **Submit a Pull Request:** Once you are assigned, you have **3 days** to submit a pull request. If there's no activity after 3 days, the issue will be un-assigned and become available for someone else to claim.
+4.  **Link Your PR:** When you create your pull request, please link it to the issue you are solving.
+
+Pull requests submitted for issues that were not claimed or were assigned to someone else will be closed.
 
 ## Step-by-Step Contribution Workflow
 
@@ -42,4 +49,22 @@ We are excited to have you contribute! This guide will walk you through the proc
     * In the description, link to the issue you are solving by writing `Closes #issue-number`.
     * Submit the PR!
 
-Thank you for your contribution! We will review it as soon as possible.
+## Description
+
+A brief, one or two-sentence summary of the changes you've made.
+
+## Changes Made
+
+A bulleted list of the specific changes. For example:
+1. Added a new file: algorithms/searching/binary_search/python/binary_search.py
+2. Implemented the Binary Search algorithm.
+3. Included Time and Space Complexity analysis.
+
+## Related Issue
+
+Please link the issue that this PR is solving. For example:
+Closes #17
+
+## Review Process
+
+Please note that the project maintainer (@YourUsername) will be automatically added as a reviewer to all pull requests. We will do our best to review your contribution within 48 hours. Thank you for your patience!
