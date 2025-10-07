@@ -19,40 +19,18 @@ We are thrilled to welcome contributions from everyone, especially first-timers!
 
 **Pull requests that do not follow these guidelines will be marked as `invalid` and closed.**
 
-## Getting Started
+Getting started is simple:
 
-Follow these steps to set up the repository locally and start contributing:
+1. **Fork & Clone the repository:**
+   git clone https://github.com/uptouplaksh/Algo-DS-Hub-for-Hacktoberfest.git
+cd Algo-DS-Hub-for-Hacktoberfest
 
-1. **Clone a GitHub repository**  
-   To work on any GitHub project locally, you first need to clone (download) the repository to your computer:  
-   - Go to the GitHub page of the repository you want to clone.  
-   - Click the green **Code** button near the top right.  
-   - Copy the repository URL (usually the HTTPS link).  
-   - Open your terminal or command prompt.  
-   - Navigate to the folder where you want to store the project.  
-   - Run the command:  
-     ```
-     git clone <repository-url>
-     ```  
-   This creates a local copy of the repository on your machine.
+2. **Create a new branch for your work:**
+   git checkout -b feat/your-new-feature
 
-2. **Example: Cloning this repository**  
-   For this project, you would run:
-    Example: git clone https://github.com/uptouplaksh/Algo-DS-Hub-for-Hacktoberfest.git
-
-3. **Navigate into the project folder** 
-   cd Algo-DS-Hub-for-Hacktoberfest
-
-4. **Create a new branch for your contribution (Required!)**  
-Always create a new branch before making any changes. This helps keep your work organized and makes it easy for maintainers to review your contribution.  
-- Use a descriptive branch name related to your changes.  
-- Example command:
-  ```
-  git checkout -b your-branch-name
-  ```
-
-5. **Read the contributing guidelines**  
-For details on folder structure, coding standards, and submission process, please refer to the [CONTRIBUTING.md](CONTRIBUTING.md).
+3. **Read our contribution guide!**
+   For all the details on our folder structure, coding standards, and how to submit your pull request, please see our Contributing Guidelines (CONTRIBUTING.md).
+I know splitting a PR is a bit of extra work, and I really appreciate you helping us keep the project organized. Please let me know if you have any questions about the process.
 
 ### Required Folder Structure
 
