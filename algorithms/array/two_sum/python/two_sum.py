@@ -1,11 +1,11 @@
 """
-# Time Complexity: O(n)
-- We iterate through the list of n elements only once. Each lookup and
-- insertion in the hash map takes constant time on average, O(1).
+Time Complexity: O(n)
+We iterate through the list of n elements only once. Each lookup and
+insertion in the hash map takes constant time on average, O(1).
 
-# Space Complexity: O(n)
-- In the worst-case scenario, we might store all n elements in the
-- hash map if the solution pair is found at the very end or not at all.
+Space Complexity: O(n)
+In the worst-case scenario, we might store all n elements in the
+hash map if the solution pair is found at the very end or not at all.
 """
 
 
