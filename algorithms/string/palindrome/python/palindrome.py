@@ -1,10 +1,21 @@
-def is_palindrome(s):
+"""
+Checks if a string is a palindrome, ignoring case and non-alphanumeric characters.
+
+Time Complexity: O(n)
+- The cleaning process iterates through the string once.
+- The reversal/comparison also takes O(n) time.
+
+Space Complexity: O(n)
+- A new 'cleaned' string is created, which can be up to n characters long.
+"""
+
+def is_palindrome(s: str) -> bool:
     """
-    Check if a given string is a palindrome.
+    Checks if a given string is a palindrome.
     A palindrome reads the same forwards and backwards.
     This function ignores case and non-alphanumeric characters.
 
-    Parameters:
+    Args:
         s (str): Input string to check.
 
     Returns:
@@ -17,13 +28,10 @@ def is_palindrome(s):
         False
     """
 
-    # Step 1: Filter out non-alphanumeric characters and convert to lowercase
-    cleaned = ""
-    for char in s:
-        if char.isalnum():          # Keep only letters and digits
-            cleaned += char.lower()  # Convert to lowercase
+    # Step 1: A more efficient and Pythonic way to filter and clean the string.
+    cleaned = ''.join(char.lower() for char in s if char.isalnum())
 
-    # Step 2: Check if cleaned string equals its reverse
+    # Step 2: Check if the cleaned string equals its reverse.
     return cleaned == cleaned[::-1]
 
 
@@ -32,35 +40,13 @@ if __name__ == "__main__":
     test_strings = [
         "A man, a plan, a canal: Panama",
         "Hello",
-        "No lemon, no melon"
+        "No lemon, no melon",
+        "race a car" # A good false case
     ]
 
+    print("Palindrome Check Example:\n")
     for text in test_strings:
         if is_palindrome(text):
             print(f"'{text}' -> Palindrome")
         else:
             print(f"'{text}' -> Not a palindrome")
-
-
-"""  
-    output:-
-    
-    'A man, a plan, a canal: Panama' -> Palindrome
-    'Hello' -> Not a palindrome
-    'No lemon, no melon' -> Palindrome
-
-""" 
-
-"""
------------------- COMPLEXITY ANALYSIS ------------------
-Let n be the length of the input string.
-
-Time Complexity:
-    O(n)
-    - We loop through the string once to clean it, and once to reverse it.
-
-Space Complexity:
-    O(n)
-    - The cleaned string and its reverse both require O(n) space.
----------------------------------------------------------
-"""
