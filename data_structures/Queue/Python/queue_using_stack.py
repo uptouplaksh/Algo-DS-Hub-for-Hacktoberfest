@@ -1,7 +1,6 @@
 """
 Queue implementation using two stacks.
 
-Author: Rebel Technology / ChatGPT
 Description:
 This module demonstrates how to implement a Queue (FIFO) using two stacks (LIFO).
 We use two lists in Python to simulate stack behavior with append() and pop() operations.
@@ -31,8 +30,6 @@ class QueueUsingStacks:
         Time Complexity: O(1)
         """
         self.stack1.append(item)
-        # Debug info
-        print(f"Enqueued: {item}, Stack1: {self.stack1}, Stack2: {self.stack2}")
 
     def dequeue(self):
         """
@@ -45,18 +42,12 @@ class QueueUsingStacks:
         if not self.stack2:
             # Move all elements from stack1 to stack2
             while self.stack1:
-                popped_item = self.stack1.pop()
-                self.stack2.append(popped_item)
-                # Debug info for each move
-                print(f"Moved {popped_item} from Stack1 → Stack2")
+                self.stack2.append(self.stack1.pop())
 
         if not self.stack2:
             raise IndexError("Dequeue from empty queue")
 
-        dequeued_item = self.stack2.pop()
-        # Debug info
-        print(f"Dequeued: {dequeued_item}, Stack1: {self.stack1}, Stack2: {self.stack2}")
-        return dequeued_item
+        return self.stack2.pop()
 
     def is_empty(self):
         """
