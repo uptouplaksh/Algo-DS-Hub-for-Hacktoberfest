@@ -1,15 +1,16 @@
 """
 Graph Implementation using Adjacency List in Python
 
-File: data_structures/Graph/python/graph_adjacency_list.py
+Description:
+This module defines a Graph data structure using an adjacency list.
+It supports adding vertices, adding directed/undirected edges, and printing the graph.
 
-This module defines a simple Graph data structure that supports:
-- Adding vertices
-- Adding edges (directed or undirected)
-- Printing the adjacency list representation
+Time Complexity:
+- add_vertex: O(1)
+- add_edge: O(1)
+- print_graph: O(V + E) where V is the number of vertices and E is the number of edges.
 
-Author: Your Name
-Date: 2025-10-08
+Space Complexity: O(V + E) for storing the graph.
 """
 
 class Graph:
