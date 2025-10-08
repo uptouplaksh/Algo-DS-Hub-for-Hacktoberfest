@@ -1,3 +1,13 @@
+/*
+HashTable Implementation in JavaScript with Chaining for collision handling.
+Time Complexity:
+set(key, value): Average O(1), Worst O(n)
+get(key): Average O(1), Worst O(n)
+remove(key): Average O(1), Worst O(n)
+(Worst case occurs when all keys hash to the same bucket, degrading to a linear search)
+Space Complexity: O(n), where n is the number of key-value pairs stored.
+*/
+
 // HashTable implementation in JavaScript using chaining for collision handling
 
 class HashTable {
