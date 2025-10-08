@@ -13,6 +13,10 @@ algorithm for using max and min functions*/
 //GCD calculation function
 int gcd(int a, int b) {
     //Calculate GCD using recursive Euclidean algorithm
+    if(a<0 || b<0){
+        cout<< "GCD is not defined for negative integers." << endl;
+        return -1; //return -1 for invalid input
+    }
     if (b == 0)
         return a; //return when base case is true
     return gcd(b, a % b); //recursive call
@@ -21,6 +25,10 @@ int gcd(int a, int b) {
 //Iterative version of GCD calculation 
 int gcd_iterative(int a,int b){ 
     //Calculate GCD using iterative Euclidean algorithm
+    if(a<0 || b<0){
+        cout<< "GCD is not defined for negative integers." << endl;
+        return -1; //return -1 for invalid input
+    }
     while(b != 0){
         int temp = b; //store b in a temporary variable
         b = a % b; //update b to a mod b
