@@ -3,29 +3,11 @@ Tower of Hanoi Puzzle Implementation in Python
 
 Description:
 This module demonstrates the classic Tower of Hanoi problem using recursion.
-The Tower of Hanoi is a mathematical puzzle that consists of three rods and a number of disks.
-The objective is to move the entire stack to another rod, obeying the following rules:
-    1. Only one disk can be moved at a time.
-    2. Each move involves taking the upper disk from one stack and placing it on another rod.
-    3. No larger disk may be placed on top of a smaller disk.
-
-File Location:
-algorithms/puzzles/tower_of_hanoi/python/tower_of_hanoi.py
-Solve the Tower of Hanoi problem recursively.
-
-Parameters:
-n (int): Number of disks
-source (str): The rod from which to move disks initially
-auxiliary (str): The rod used as a helper
-destination (str): The rod to move all disks to
-
-Prints:
-Steps to move each disk from source to destination rod.
+The objective is to move the entire stack to another rod, obeying a set of simple rules:
 
 Time Complexity: O(2^n)
-    - Each disk move generates two recursive calls.
 Space Complexity: O(n)
-    - Due to the recursion call stack.
+
 """
 
 def tower_of_hanoi(n, source, auxiliary, destination):
