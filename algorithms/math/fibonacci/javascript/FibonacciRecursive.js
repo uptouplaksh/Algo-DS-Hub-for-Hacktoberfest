@@ -19,6 +19,10 @@
  */
 
 function fibonacciRecursive(n) {
+  if (n < 0) {
+    throw new Error("Input must be a non-negative integer.")
+  }
+  
   // Base cases
   if (n === 0) return 0;
   if (n === 1) return 1;
