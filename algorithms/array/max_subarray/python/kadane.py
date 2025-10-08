@@ -23,6 +23,11 @@ def kadane(arr):
         int: The maximum subarray sum.
     """
 
+       # Handle empty array edge case
+       # The sum of an empty subarray is 0
+    if not arr:
+        return 0 
+    
     # Initialize max_current and max_global with the first element
     max_current = max_global = arr[0]
 
