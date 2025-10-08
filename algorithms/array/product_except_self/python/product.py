@@ -1,6 +1,6 @@
 from typing import List
 
-def product_except_self(nums):
+def product_except_self(nums: List[int]) -> List[int]:
     """
     Given an array of integers, returns an array such that the output at index i 
     is the product of all the elements of the original array except the one at i. 
@@ -37,3 +37,4 @@ if __name__ == "__main__": # This block will only run if the script is executed 
     print("Input array:", nums) # Print the input array
 
     print("Product Except Self:",product_except_self(nums)) # Print the result  
+
