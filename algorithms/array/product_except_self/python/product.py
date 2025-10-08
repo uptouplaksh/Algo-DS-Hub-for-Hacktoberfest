@@ -1,3 +1,5 @@
+from typing import List
+
 def product_except_self(nums):
     """
     Given an array of integers, returns an array such that the output at index i 
@@ -6,6 +8,12 @@ def product_except_self(nums):
 
     # Time Complexity: O(n) - We traverse the array a constant number of times.
     # Space Complexity: O(1) - We use the output array for storage, not counting the input and output space.
+
+    Args:
+        nums (List[int]): Input list of integers.
+
+    Returns:
+        List[int]: List where each element is the product of all other elements.
     """
 
     n=len(nums) # Length of the input array
@@ -27,4 +35,5 @@ def product_except_self(nums):
 if __name__ == "__main__": # This block will only run if the script is executed directly
     nums=[1,2,3,4] # Example input
     print("Input array:", nums) # Print the input array
+
     print("Product Except Self:",product_except_self(nums)) # Print the result  
