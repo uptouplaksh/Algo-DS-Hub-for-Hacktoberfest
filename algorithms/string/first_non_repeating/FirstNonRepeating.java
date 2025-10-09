@@ -1,5 +1,12 @@
-package string.first_non_repeating;
-
+/*
+ * Finds the first non-repeating character in a string using a two-pass approach.
+ *
+ * Time Complexity: O(n), where n is the length of the string,
+ * because we iterate through the string twice.
+ *
+ * Space Complexity: O(1), as the frequency array is a fixed size (256 for ASCII)
+ * and does not depend on the input string length.
+ */
 
 public class FirstNonRepeating {
 
@@ -28,8 +35,4 @@ public class FirstNonRepeating {
         char result = nonRepeatingChar(str);
         System.out.println("First non-repeating character: " + result);
     }
-
-    // Time Complexity: O(n)
-    // Space Complexity: O(1) (fixed-size freq array of 256)
-    //  Author: Ruturaj Pawar (@Ruturaj-007)
 }
