@@ -29,22 +29,21 @@ def string_compression(s: str) -> str:
         return ""
     
     #Initialize helper variables
-    l, h, count=0, 0, 1
+    count= 0
     res = ""
 
     # Loop to move through string, with help of 2 pointers
-    while(h<len(s)):
-        if(s[h] == s[l]):
-            h = h+1
+    for i in range(len(s)):
+        if(s[i] == s[i-1]):
             count = count+1
         else:
-            res = res + str(h-l)
-            res = res + s[l]
-            l = h
+            res = res + str(count) 
+            res = res + s[i-1]
+            count = 1
     
     # Need to add last character before ending the function
-    res = res + str(h-l)
-    res = res + s[l]
+    res = res + str(count)
+    res = res + s[-1]
     
     return res
 
