@@ -14,7 +14,13 @@ Space Complexity: O(1)
 """
 
 def sort_colors(nums):
-    
+    """
+    Sorts an array containing only 0s, 1s, and 2s in-place using the
+    Dutch National Flag algorithm.
+
+    Args:
+        nums (list[int]): The list of numbers to be sorted. It is modified in-place.
+    """
     low, mid, high = 0, 0, len(nums) - 1
 
     # Traverse the list and arrange elements in a single pass
