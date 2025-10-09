@@ -16,16 +16,6 @@ Space Complexity: O(k)
 from collections import deque
 
 def sliding_window_max(nums, k):
-    """
-    Finds the maximum value in each sliding window of size k.
-
-    Parameters:
-        nums (list): A list of integers.
-        k (int): Size of the sliding window.
-
-    Returns:
-        list: A list of maximum values for each window.
-    """
     if not nums or k <= 0:
         return []
 
