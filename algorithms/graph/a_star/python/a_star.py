@@ -2,12 +2,15 @@
 A* (A-Star) Search Algorithm Implementation in Python
 
 Time Complexity:
-- Worst Case: O(E) where E = number of edges (like Dijkstra’s Algorithm).
+- Worst Case: O(E log V) due to priority queue operations.
 - With a good heuristic: much faster in practice.
 
 Space Complexity:
 - O(V) where V = number of vertices (for storing scores and open set).
 """
+
+import heapq
+
 
 def a_star(start, goal, graph, heuristic):
     """
@@ -20,8 +23,10 @@ def a_star(start, goal, graph, heuristic):
     :param heuristic: Function estimating cost from a node to the goal
     :return: Shortest path as a list of nodes, or None if no path exists
     """
-    open_set = [start]          # Nodes to be evaluated
-    came_from = {}              # Path reconstruction map
+    open_set = []
+    heapq.heappush(open_set, (heuristic(start, goal), start))  # (f_score, node)
+
+    came_from = {}  # Path reconstruction map
 
     g_score = {node: float('inf') for node in graph}
     g_score[start] = 0
@@ -30,13 +35,11 @@ def a_star(start, goal, graph, heuristic):
     f_score[start] = heuristic(start, goal)
 
     while open_set:
-        # Pick node with lowest f-score
-        current = min(open_set, key=lambda node: f_score[node])
+        # Get node with lowest f-score efficiently
+        _, current = heapq.heappop(open_set)
 
         if current == goal:
             return reconstruct_path(came_from, current)
-
-        open_set.remove(current)
 
         for neighbor, cost in graph[current].items():
             tentative_g = g_score[current] + cost
@@ -46,8 +49,8 @@ def a_star(start, goal, graph, heuristic):
                 g_score[neighbor] = tentative_g
                 f_score[neighbor] = tentative_g + heuristic(neighbor, goal)
 
-                if neighbor not in open_set:
-                    open_set.append(neighbor)
+                # Push new state into the heap
+                heapq.heappush(open_set, (f_score[neighbor], neighbor))
 
     return None
 
@@ -84,7 +87,7 @@ if __name__ == "__main__":
     # Example 2: Weighted Graph with multiple routes
     # -------------------------------
     print("Example 2: Weighted Graph with multiple routes")
-    graph3 = {
+    graph2 = {
         'S': {'A': 2, 'B': 5},
         'A': {'S': 2, 'B': 2, 'C': 4},
         'B': {'S': 5, 'A': 2, 'C': 1, 'D': 7},
@@ -98,5 +101,22 @@ if __name__ == "__main__":
         h = {'S': 7, 'A': 6, 'B': 5, 'C': 2, 'D': 1, 'G': 0}
         return h[node]
 
-    path3 = a_star('S', 'G', graph3, heuristic2)
-    print(f"Shortest path S → G: {path3}")
+    path2 = a_star('S', 'G', graph2, heuristic2)
+    print(f"Shortest path S → G: {path2}\n")
+
+    # -------------------------------
+    # Example 3: No Path Available
+    # -------------------------------
+    print("Example 3: No Path Available")
+    graph3 = {
+        'X': {'Y': 2},
+        'Y': {'X': 2},
+        'Z': {}  # Isolated node, unreachable
+    }
+
+    def heuristic3(node, goal):
+        h = {'X': 5, 'Y': 3, 'Z': 0}
+        return h[node]
+
+    path3 = a_star('X', 'Z', graph3, heuristic3)
+    print(f"Shortest path X → Z: {path3}")  # Expected: None
