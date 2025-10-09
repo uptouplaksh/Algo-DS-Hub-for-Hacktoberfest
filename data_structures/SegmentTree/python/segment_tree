@@ -1,7 +1,6 @@
 """
 Segment Tree Implementation in Python
 -------------------------------------
-Author: Mohit Garg
 
 This program implements a basic Segment Tree data structure.
 It allows you to:
