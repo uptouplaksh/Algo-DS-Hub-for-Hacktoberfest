@@ -1,0 +1,131 @@
+name: Stale Issue Reminder
+
+on:
+  schedule:
+    # run daily at 9:00 AM UTC
+    - cron: '0 9 * * *'
+  workflow_dispatch: #manual triggering for testing
+
+jobs:
+  check-stale-issues:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: read
+      contents: read
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check for stale issues
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const { owner, repo } = context.repo;
+            const THREE_DAYS_MS = 1000 * 60 * 60 * 24 * 3;
+            const issues = await github.rest.issues.listForRepo({
+              owner,
+              repo,
+              state: 'open',
+              per_page: 100
+            });
+            const trueIssues = issues.data.filter(issue => !issue.pull_request);
+            
+            console.log(`Found ${trueIssues.length} open issues`);
+
+            
+            for (const issue of issues.data) {
+              const hasInProgressLabel = issue.labels.some(label => 
+                label.name.toLowerCase() === 'in-progress'
+              );
+              if (issue.pull_request || !issue.assignees || issue.assignees.length === 0 || !hasInProgressLabel) {
+                continue;
+              }              
+              console.log(`Checking issue #${issue.number}: ${issue.title}`);
+              
+              const timeline = await github.rest.issues.listEventsForTimeline({
+                owner,
+                repo,
+                issue_number: issue.number,
+                per_page: 100
+              });
+              
+              let inProgressLabelAddedAt = null;
+              
+              //most recent time "in-progress" label was added
+              for (const event of timeline.data.reverse()) {
+                if (event.event === 'labeled' && 
+                    event.label && 
+                    event.label.name.toLowerCase() === 'in-progress') {
+                  inProgressLabelAddedAt = event.created_at;
+                  break;
+                }
+              }
+              
+              if (!inProgressLabelAddedAt) {
+                console.log(`Could not find when "in-progress" label was added to issue #${issue.number}`);
+                continue;
+              }
+              
+              const labelAddedTime = new Date(inProgressLabelAddedAt);
+              const now = new Date();
+              const timeDiff = now-labelAddedTime;
+              
+              if (timeDiff < THREE_DAYS_MS) {
+                console.log(`Issue #${issue.number} is not stale yet`);
+                continue;
+              }
+            
+              let hasLinkedPRs = false;
+              
+              try {
+                const pullRequests = await github.rest.pulls.list({
+                  owner,
+                  repo,
+                  state: 'open',
+                  per_page: 100
+                });
+                
+                // check each PR
+                for (const pr of pullRequests.data) {
+                  const issueNumber = issue.number.toString();
+                  const prTitle = pr.title.toLowerCase();
+                  const prBody = pr.body ? pr.body.toLowerCase() : '';
+                  
+                  const linkPatterns = [`#${issueNumber}`, `closes #${issueNumber}`];
+                  
+                  const isLinked = linkPatterns.some(pattern => 
+                    prTitle.includes(pattern) || prBody.includes(pattern)
+                  );
+                  
+                  if (isLinked) {
+                    hasLinkedPRs = true;
+                    console.log(`Issue #${issue.number} is linked to PR #${pr.number}`);
+                    break;
+                  }
+                }
+              } catch (error) {
+                console.log(`Error checking PRs for issue #${issue.number}: ${error.message}`);
+              }
+              
+              if (hasLinkedPRs) {
+                console.log(`Issue #${issue.number} has linked PR(s), skipping`);
+                continue;
+              }
+              
+              // post reminder comment
+              console.log(`Issue #${issue.number} is stale`);
+              const assigneeUsernames = issue.assignees.map(assignee => `@${assignee.login}`).join(' ');
+              const commentBody = `Hi ${assigneeUsernames}, this is a friendly reminder that it has been 3 days since this issue was assigned. As per our contribution guidelines, we kindly ask for a pull request to be submitted soon or an update on your progress. If there is no activity within the next 24 hours, the issue may be unassigned to allow other contributors a chance to work on it. If you are still working on this, please just leave a comment to let us know! Thank you for your contribution.`;
+              
+              await github.rest.issues.createComment({
+                owner,
+                repo,
+                issue_number: issue.number,
+                body: commentBody
+              });
+              
+              console.log(`Posted reminder comment on issue #${issue.number}`);
+            }
