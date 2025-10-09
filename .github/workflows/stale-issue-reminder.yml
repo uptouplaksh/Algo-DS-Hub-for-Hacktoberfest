@@ -24,7 +24,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const { owner, repo } = context.repo;
-            const THREE_DAYS_MS = 60*60*24*3;
+            const THREE_DAYS_MS = 1000 * 60 * 60 * 24 * 3;
             const issues = await github.rest.issues.listForRepo({
               owner,
               repo,
