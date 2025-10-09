@@ -18,6 +18,16 @@ Space Complexity: O(n * k)
 from collections import defaultdict
 
 def group_anagrams(words):
+    """
+    Groups a list of words into lists of anagrams.
+
+    Args:
+        words (list[str]): A list of strings.
+
+    Returns:
+        list[list[str]]: A list of lists, where each inner list contains words
+                         that are anagrams of each other.
+    """
     anagram_map = defaultdict(list)
 
     # Create a mapping where sorted tuple of characters is the key
