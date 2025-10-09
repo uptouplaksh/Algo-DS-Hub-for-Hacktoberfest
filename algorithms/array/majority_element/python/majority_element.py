@@ -11,6 +11,15 @@ Space Complexity: O(1)
 """
 
 def find_majority_element(nums):
+    """
+    Finds the majority element in a list using the Boyer-Moore Voting Algorithm.
+
+    Args:
+        nums (list[int]): A list of integers.
+
+    Returns:
+        int or None: The majority element if it exists, otherwise None.
+    """
     candidate = None
     count = 0
 
