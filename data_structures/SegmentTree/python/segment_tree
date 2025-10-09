@@ -1,0 +1,165 @@
+"""
+Segment Tree Implementation in Python
+-------------------------------------
+Author: Mohit Garg
+
+This program implements a basic Segment Tree data structure.
+It allows you to:
+  1. Build the tree from an input array
+  2. Query the sum of elements within any given range [L, R]
+  3. Update a single element in the array efficiently
+
+Why Segment Tree?
+-----------------
+If you use a normal array, finding the sum of a range [L, R]
+takes O(n) time. But with a segment tree, we can do it in O(log n),
+and also update an element in O(log n).
+
+Complexity:
+-----------
+Build  -> O(n)
+Query  -> O(log n)
+Update -> O(log n)
+"""
+
+class SegmentTree:
+    def __init__(self, arr):
+        """
+        Constructor: Initializes the segment tree.
+
+        Parameters:
+        arr (list): The input array from which we build the tree.
+        """
+        self.n = len(arr)                 # Number of elements in the array
+        self.data = arr[:]                # Make a copy of the input array
+        self.tree = [0] * (4 * self.n)    # Tree can take up to 4*n space
+        self._build(1, 0, self.n - 1)     # Build the segment tree (start with root node = 1)
+
+    def _build(self, node, start, end):
+        """
+        Recursive function to build the segment tree.
+
+        node  -> current node index in the tree array
+        start -> starting index of the segment in the original array
+        end   -> ending index of the segment
+        """
+        if start == end:
+            # Base case: if start == end, it means we are at a leaf node
+            self.tree[node] = self.data[start]
+        else:
+            # Divide the current segment into two halves
+            mid = (start + end) // 2
+
+            # Recursively build left and right child
+            self._build(node * 2, start, mid)          # Left child: node*2
+            self._build(node * 2 + 1, mid + 1, end)    # Right child: node*2 + 1
+
+            # Internal node value = sum of its two children
+            self.tree[node] = self.tree[node * 2] + self.tree[node * 2 + 1]
+
+    def query(self, left, right):
+        """
+        Public method to query the sum between indices [left, right].
+        """
+        return self._query(1, 0, self.n - 1, left, right)
+
+    def _query(self, node, start, end, left, right):
+        """
+        Recursive helper function to find sum in range [left, right].
+
+        node  -> current node in segment tree
+        start -> range start of current segment
+        end   -> range end of current segment
+        left, right -> query range
+        """
+
+        # Case 1: Range represented by this node is completely outside [left, right]
+        if right < start or end < left:
+            return 0  # No contribution
+
+        # Case 2: Range represented by this node is completely inside [left, right]
+        if left <= start and end <= right:
+            return self.tree[node]
+
+        # Case 3: Partial overlap - we go to both children
+        mid = (start + end) // 2
+        left_sum = self._query(node * 2, start, mid, left, right)
+        right_sum = self._query(node * 2 + 1, mid + 1, end, left, right)
+
+        # Combine results from left and right child
+        return left_sum + right_sum
+
+    def update(self, index, value):
+        """
+        Public method to update the value at a given index.
+
+        index -> position in array to be updated
+        value -> new value to be placed at that index
+        """
+        self._update(1, 0, self.n - 1, index, value)
+
+    def _update(self, node, start, end, index, value):
+        """
+        Recursive helper function for updating a single element.
+        """
+        if start == end:
+            # Leaf node found — update both array and tree
+            self.data[index] = value
+            self.tree[node] = value
+        else:
+            mid = (start + end) // 2
+
+            # If index lies in left half
+            if index <= mid:
+                self._update(node * 2, start, mid, index, value)
+            else:
+                # If index lies in right half
+                self._update(node * 2 + 1, mid + 1, end, index, value)
+
+            # After updating a child, recalculate the current node's sum
+            self.tree[node] = self.tree[node * 2] + self.tree[node * 2 + 1]
+
+
+# --------------------------------------------------------
+# Example Use Cases (You can run this file directly!)
+# --------------------------------------------------------
+if __name__ == "__main__":
+    # Initial array
+    nums = [1, 3, 5, 7, 9, 11]
+    seg = SegmentTree(nums)
+
+    print("Original array:", nums)
+    print("-----------------------------------")
+
+    # Example 1: Query sum in range [1, 3]
+    # Expected = 3 + 5 + 7 = 15
+    result1 = seg.query(1, 3)
+    print("Sum of range [1, 3]:", result1)
+
+    # Example 2: Update index 1 -> 10
+    # So array becomes [1, 10, 5, 7, 9, 11]
+    seg.update(1, 10)
+    print("\nAfter updating index 1 to 10:", seg.data)
+
+    # Now query again on [1, 3]
+    # Expected = 10 + 5 + 7 = 22
+    result2 = seg.query(1, 3)
+    print("Sum of range [1, 3] after update:", result2)
+
+    # Example 3: Query sum of the entire array
+    # Expected = 1 + 10 + 5 + 7 + 9 + 11 = 43
+    result3 = seg.query(0, 5)
+    print("\nSum of entire array [0, 5]:", result3)
+
+    # Example 4: Query a small range [2, 4]
+    # Expected = 5 + 7 + 9 = 21
+    result4 = seg.query(2, 4)
+    print("Sum of range [2, 4]:", result4)
+
+    # Example 5: Query a single element [3, 3]
+    # Expected = 7
+    result5 = seg.query(3, 3)
+    print("Sum of single element [3, 3]:", result5)
+
+    print("-----------------------------------")
+    print("✅ All operations executed successfully!")
