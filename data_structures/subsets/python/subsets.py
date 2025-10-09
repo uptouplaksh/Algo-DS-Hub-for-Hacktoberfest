@@ -1,11 +1,14 @@
 """
-Time Complexity: O(2^n)
-- Each element has two choices: include or exclude.
-- Total number of subsets for a set of size n is 2^n.
+Generates all subsets (the power set) of a given set of distinct integers.
+
+Time Complexity: O(n * 2^n)
+- There are 2^n possible subsets.
+- For each subset, we create a copy of it to add to the result list.
+  In the worst case, this copy operation takes O(n) time.
 
 Space Complexity: O(n)
-- The recursion call stack can go as deep as n.
-- Additional space is used to build subsets during recursion.
+- The recursion call stack can go as deep as n. This does not include the
+  space required for the output list itself, which would be O(n * 2^n).
 """
 
 def generate_subsets(nums):
