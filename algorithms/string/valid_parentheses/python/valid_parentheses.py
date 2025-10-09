@@ -1,71 +1,95 @@
-# File: algorithms/string/valid_parentheses/python/valid_parentheses.py
+"""
+Checks if a string of parentheses (brackets) is valid.
+
+A string is considered valid if:
+- Every opening bracket has a corresponding closing bracket of the same type.
+- Brackets are closed in the correct order (i.e., properly nested).
+
+Example:
+    Input: "([{}])"
+    Output: True
+
+Approach:
+    We use a stack to keep track of opening brackets.
+    - When we encounter an opening bracket, we push it onto the stack.
+    - When we encounter a closing bracket, we check whether it matches the
+      top element of the stack (the most recent opening bracket).
+    - If it matches, we pop the stack; otherwise, the string is invalid.
+
+Time Complexity: O(n)
+    We traverse the string once, performing constant-time operations per character.
+Space Complexity: O(n)
+    In the worst case (all opening brackets), we store all characters in the stack.
+"""
+
 
 def is_valid_parentheses(s: str) -> bool:
     """
-    Check if the input string of parentheses is valid.
-    
-    A string is valid if:
-    1. Open brackets are closed by the same type of brackets.
-    2. Open brackets are closed in the correct order.
+    Determines whether the given string of parentheses is valid.
 
     Args:
-        s (str): Input string containing '(', ')', '{', '}', '[' and ']'
+        s (str): The input string consisting of characters '(', ')', '{', '}', '[' and ']'.
 
     Returns:
-        bool: True if string is valid, False otherwise
+        bool: True if the parentheses string is valid, False otherwise.
 
-    Approach:
-    - Use a stack to keep track of opening brackets.
-    - When a closing bracket is encountered:
-        - If the stack is empty or top of stack doesn't match, the string is invalid.
-        - Otherwise, pop the matching opening bracket from the stack.
-    - At the end, the stack must be empty for the string to be valid.
-
-    Time Complexity: O(n), where n is the length of the string.
-        - Each character is pushed and popped at most once.
-    Space Complexity: O(n), in the worst case all characters are opening brackets.
+    Example:
+        >>> is_valid_parentheses("()[]{}")
+        True
+        >>> is_valid_parentheses("(]")
+        False
     """
-    
-    # Stack to keep track of opening brackets
+
+    # Stack to store opening brackets as they appear
     stack = []
-    
-    # Dictionary to map closing brackets to corresponding opening brackets
+
+    # Mapping of closing brackets to their corresponding opening brackets
     bracket_map = {')': '(', '}': '{', ']': '['}
-    
+
     for char in s:
         if char in bracket_map.values():
-            # Opening bracket: push onto the stack
+            # Opening bracket → push onto stack
             stack.append(char)
         elif char in bracket_map:
-            # Closing bracket: check if it matches top of stack
-            if not stack or stack[-1] != bracket_map[char]:
+            # Closing bracket → check if top of stack matches
+            if not stack:
+                # No opening bracket to match
                 return False
-            stack.pop()  # Pop the matched opening bracket
+            if stack[-1] != bracket_map[char]:
+                # Mismatched bracket type
+                return False
+            stack.pop()  # Matched pair, remove top element
         else:
-            # Invalid character (not part of problem constraints)
-            return False
+            # Ignore any non-bracket characters (not required for this problem)
+            continue
 
-    # If stack is empty, all brackets matched correctly
+    # Valid if no unmatched opening brackets remain
     return len(stack) == 0
 
 
-# -------------------------------
-# Runnable example block
-# -------------------------------
 if __name__ == "__main__":
-    # Test cases: each tuple contains (input_string, expected_output)
+    # -------------------------------
+    # Runnable Example Block
+    # -------------------------------
+
+    print("Testing Valid Parentheses Function\n" + "-" * 40)
+
+    # Test cases: (input_string, expected_output)
     test_cases = [
         ("()", True),
         ("()[]{}", True),
         ("(]", False),
         ("([{}])", True),
         ("([)]", False),
-        ("", True),
+        ("", True),  # Empty string is valid
         ("{[()()]}", True),
-        ("{[(])}", False)
+        ("{[(])}", False),
+        ("(", False),  # Unmatched opening bracket
+        ("}", False)   # Unmatched closing bracket
     ]
 
-    print("Testing valid parentheses function:\n")
+    # Run each test and display results clearly
     for s, expected in test_cases:
         result = is_valid_parentheses(s)
-        print(f"is_valid_parentheses('{s}') = {result} | Expected = {expected}")
+        status = "✅ PASSED" if result == expected else "❌ FAILED"
+        print(f"{status}: is_valid_parentheses('{s}') → {result} (Expected: {expected})")
