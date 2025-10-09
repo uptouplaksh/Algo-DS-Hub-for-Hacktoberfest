@@ -19,6 +19,10 @@ Pull requests submitted for issues that were not claimed or were assigned to som
     ```bash
     git clone [https://github.com/YOUR-USERNAME/Algo-DS-Hub-for-Hacktoberfest.git](https://github.com/YOUR-USERNAME/Algo-DS-Hub-for-Hacktoberfest.git)
     ```
+    Pro-Tip: After you clone your fork, it's a great practice to configure a remote that points back to our main repository. This allows you to keep your main branch in sync with the project. You can do this with the command:
+    ```bash
+    git remote add upstream https://github.com/uptouplaksh/Algo-DS-Hub-for-Hacktoberfest.git
+    ```
 
 4.  **Create a New Branch:** A dedicated branch for your feature is essential.
     ```bash
