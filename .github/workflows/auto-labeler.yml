@@ -1,0 +1,86 @@
+name: Auto Labeler
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  auto-label:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      contents: read
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Auto label PR
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const { owner, repo } = context.repo;
+            const pullNumber = context.payload.pull_request.number;
+            
+            const { data: files } = await github.rest.pulls.listFiles({
+              owner,
+              repo,
+              pull_number: pullNumber
+            });
+            
+            console.log(`Found ${files.length} changed files in PR #${pullNumber}`);
+            
+            const labelsToAdd = new Set();
+            
+            for (const file of files) {
+              const filename = file.filename;
+              console.log(`Checking file: ${filename}`);
+              
+              //Python files
+              if (filename.includes('/python/') || filename.includes('\\python\\')) {
+                labelsToAdd.add('python');
+                console.log('Added python label');
+              }
+              
+              //JavaScript files
+              if (filename.includes('/javascript/') || filename.includes('\\javascript\\')) {
+                labelsToAdd.add('javascript');
+                console.log('Added javascript label');
+              }
+              
+              //Java files
+              if (filename.includes('/java/') || filename.includes('\\java\\')) {
+                labelsToAdd.add('java');
+                console.log('Added java label');
+              }
+              
+              //C++ files
+              if (filename.includes('/c_plus_plus/') || filename.includes('\\c_plus_plus\\')) {
+                labelsToAdd.add('c++');
+                console.log('Added c++ label');
+              }
+              
+              //documentation files
+              if (filename.endsWith('.md')) {
+                labelsToAdd.add('documentation');
+                console.log('Added documentation label');
+              }
+            }
+            
+            const labels = Array.from(labelsToAdd);
+            
+            if (labels.length > 0) {
+              console.log(`Adding labels: ${labels.join(', ')}`);
+              
+              await github.rest.issues.addLabels({
+                owner,
+                repo,
+                issue_number: pullNumber,
+                labels: labels
+              });
+              
+              console.log(`Successfully added ${labels.length} label(s) to PR #${pullNumber}`);
+            } else {
+              console.log('No matching labels found for this PR');
+            }
