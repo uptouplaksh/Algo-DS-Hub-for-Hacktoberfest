@@ -109,3 +109,4 @@ if __name__ == "__main__":
     start_node = 'A'
     print("Graph adjacency list:", graph_example)
     print(f"BFS traversal starting from '{start_node}':", bfs_main(graph_example, 'A'))
+    print(f"BFS with levels from '{start_node}':", bfs_main(graph_example, 'A', is_withLevel=True))
