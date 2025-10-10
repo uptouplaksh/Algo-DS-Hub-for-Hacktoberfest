@@ -4,7 +4,7 @@ from insertion_sort import insertion_sort
 
 class TestInsertionSort(unittest.TestCase):
     def test_standard_unsorted(self):
-        arr = [12, 11, 13, 5, 6]
+        arr = [12, 11, 13, 5, 6, 7]
         expected = sorted(arr)
         self.assertEqual(insertion_sort(arr.copy()), expected)
 
