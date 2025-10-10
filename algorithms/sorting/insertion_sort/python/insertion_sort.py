@@ -13,6 +13,20 @@
 def insertion_sort(arr):
     """
     Sorts an array using the Insertion Sort algorithm.
+#
+# Insertion Sort Algorithm in Python
+#
+# Time Complexity:
+#   - Best Case: O(n) - When the array is already sorted.
+#   - Average Case: O(n^2) - When the array is randomly ordered.
+#   - Worst Case: O(n^2) - When the array is sorted in reverse.
+#
+# Space Complexity: O(1) - It's an in-place sorting algorithm.
+#
+
+def insertion_sort(arr):
+    """
+    Sorts an array using the Insertion Sort algorithm.
 
     Args:
         arr: A list of comparable elements.
@@ -32,6 +46,7 @@ def insertion_sort(arr):
             j -= 1
         arr[j + 1] = key
     return arr
+
 
 # Example Usage:
 if __name__ == "__main__":
