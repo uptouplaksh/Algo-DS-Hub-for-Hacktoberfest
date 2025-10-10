@@ -12,8 +12,6 @@
  * Space Complexity:
  * - O(1) (in-place sorting)
  *
- * Author: Your Name
- * Date: 2025-10-10
  */
 
 public class HeapSort {
