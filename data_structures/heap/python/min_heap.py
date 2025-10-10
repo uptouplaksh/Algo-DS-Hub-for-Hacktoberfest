@@ -5,22 +5,13 @@ Min-Heap Implementation in Python
 
 A min-heap is a complete binary tree where the value of each parent node
 is less than or equal to the values of its children.
-This implementation provides the following operations:
-    - insert(key): Adds a new element to the heap.
-    - get_min(): Returns the smallest element (root) without removing it.
-    - extract_min(): Removes and returns the smallest element.
-    
-Example:
-    >>> heap = MinHeap()
-    >>> heap.insert(10)
-    >>> heap.insert(5)
-    >>> heap.insert(20)
-    >>> print(heap.get_min())
-    5
-    >>> print(heap.extract_min())
-    5
-    >>> print(heap.get_min())
-    10
+
+Time Complexity:
+- insert(key): O(log n)
+- get_min(): O(1)
+- extract_min(): O(log n)
+
+Space Complexity: O(n)
 """
 
 class MinHeap:
