@@ -1,7 +1,6 @@
-package algorithms.sorting.insertion_sort.java;
 /*
- * insertion_sort.java
- * File location: /algorithms/sorting/insertion_sort/java/insertion_sort.java
+ * InsertionSort.java
+ * File location: /algorithms/sorting/insertion_sort/java/InsertionSort.java
  *
  * Insertion Sort implementation (ascending order)
  *
@@ -20,7 +19,7 @@ package algorithms.sorting.insertion_sort.java;
  *   by shifting larger elements to the right.
  */
 
-public class insertion_sort {
+public class InsertionSort {
 
     /**
      * Sorts the given integer array in ascending order using insertion sort.
