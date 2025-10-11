@@ -1,0 +1,50 @@
+name: Python Linting on PR
+
+on:
+  pull_request:
+    branches:
+      - main # or your default branch
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          # Fetch depth 0 ensures we get the full history needed for git diff
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x' # Choose your desired Python version
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install flake8 # Install the linter
+
+      # 1. Get changed Python files
+      - name: Get changed Python files
+        id: files
+        run: |
+          # Use git diff to find files changed between the merge-base (or 'before') 
+          # and the current commit (github.sha).
+          # '|| true' ensures the step doesn't fail if no .py files are changed.
+          CHANGED_FILES=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '\.py$' || true)
+          echo "Changed Python Files: $CHANGED_FILES"
+          echo "files=$CHANGED_FILES" >> $GITHUB_OUTPUT
+        # Note: The original example uses '::set-output', which is deprecated.
+        # This modern version uses '$GITHUB_OUTPUT'.
+
+      # 2. Run flake8 on changed files
+      - name: Run flake8 on changed files
+        # Check if the output variable 'files' is NOT empty.
+        if: steps.files.outputs.files != ''
+        run: |
+          echo "Running flake8 on the following files:"
+          echo "${{ steps.files.outputs.files }}"
+          # The 'flake8' command receives the list of files as a single string 
+          # and processes them correctly.
+          flake8 ${{ steps.files.outputs.files }}
