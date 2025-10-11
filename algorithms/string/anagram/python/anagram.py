@@ -7,12 +7,20 @@ Space Complexity: O(n) for storing sorted strings
 
 def is_anagram(str1, str2):
     """
-    check if two strings are anagrams of each other.
+    Checks if two strings are anagrams of each other.
     
-    returns:
-        bool: True if anagrams, False otherwise
-
+    An anagram is a word or phrase formed by rearranging the letters of a
+    different word or phrase, typically using all the original letters
+    exactly once. This function ignores spaces and is case-insensitive.
+    
+    Args:
+        str1 (str): The first string.
+        str2 (str): The second string.
+    
+    Returns:
+        bool: True if the strings are anagrams, False otherwise.
     """
+
     # To remove spaces and convert to lowercase
     str1 = str1.replace(" ", "").lower()
     str2 = str2.replace(" ", "").lower()
