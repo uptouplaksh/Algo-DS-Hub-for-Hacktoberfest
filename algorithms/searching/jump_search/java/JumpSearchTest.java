@@ -52,4 +52,27 @@ public class JumpSearchTest {
         int result = JumpSearch.jumpSearch(arr, target);
         assertEquals(9, result, "Last element should be found at index 9");
     }
+
+    /**
+     * Test searching on an empty array.
+     */
+    @Test
+    public void testEmptyArray() {
+        int[] arr = {};
+        int target = 5;
+        int result = JumpSearch.jumpSearch(arr, target);
+        assertEquals(-1, result, "Searching an empty array should return -1");
+    }
+
+    /**
+     * Test searching on an array with a single element.
+     */
+    @Test
+    public void testSingleElementArray() {
+        int[] arr = {42};
+        // Test for element found
+        assertEquals(0, JumpSearch.jumpSearch(arr, 42), "Should find the element in a single-element array");
+        // Test for element not found
+        assertEquals(-1, JumpSearch.jumpSearch(arr, 10), "Should correctly return -1 for a non-existent element");
+    }
 }
