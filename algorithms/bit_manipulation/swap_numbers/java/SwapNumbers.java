@@ -1,44 +1,56 @@
-// This class provides a method to swap two integer variables without using a temporary variable, employing the bitwise XOR operation.
-/*
- * Swaps two integer variables without using a temporary variable, using the bitwise XOR algorithm.
+package algorithms.bit_manipulation.swap_numbers.java;
+
+/**
+ * SwapNumbers demonstrates swapping two integers without using a temporary variable
+ * by leveraging the bitwise XOR operation.
  *
- * Time Complexity: O(1), as the number of operations is constant.
- * Space Complexity: O(1), as no extra space is used.
+ * Time Complexity: O(1) – constant number of operations.
+ * Space Complexity: O(1) – no extra space used.
  */
 public class SwapNumbers {
 
-    /*
-     - The main method demonstrates the swapping of two integer variables using the bitwise XOR swap algorithm.
-     - @param args Command line arguments (not used in this example).
-    */
-    public static void main(String[] args) {
-        // Initialize two integer variables.
-        int a = 10;
-        int b = 20;
-
+    /**
+     * Swaps two integer values using the bitwise XOR operator.
+     * 
+     * XOR Swap Logic:
+     * - XOR properties: 
+     *   1. x ^ x = 0
+     *   2. x ^ 0 = x
+     *   3. (x ^ y) ^ y = x (reversible)
+     * 
+     * Steps:
+     * Suppose a = 5, b = 10
+     * 1. a = a ^ b → a holds XOR of a and b
+     * 2. b = a ^ b → b now holds original a
+     * 3. a = a ^ b → a now holds original b
+     *
+     * @param a first integer
+     * @param b second integer
+     */
+    public static void swapNumbers(int a, int b) {
         System.out.println("--- Before Swap ---");
         System.out.println("a = " + a);
         System.out.println("b = " + b);
-        System.out.println();
 
-        // The XOR swap algorithm consists of three steps:
-
-        // Step 1: a now becomes a XOR b.
-        // The bits in 'a' now hold the result of XORing the original 'a' and 'b'.
+        // Step 1: a becomes a XOR b
         a = a ^ b;
 
-        // Step 2: b now becomes (a XOR b) XOR b = a.
-        // XORing the result from Step 1 with the original 'b' effectively
-        // cancels out 'b', leaving the original value of 'a' in 'b'.
+        // Step 2: b becomes original a
         b = a ^ b;
 
-        // Step 3: a now becomes (a XOR b) XOR a = b.
-        // XORing the result from Step 1 with the new value of 'b' (which is the
-        // original 'a') cancels out 'a', leaving the original value of 'b' in 'a'.
+        // Step 3: a becomes original b
         a = a ^ b;
 
         System.out.println("--- After Swap ---");
         System.out.println("a = " + a);
         System.out.println("b = " + b);
+    }
+
+    public static void main(String[] args) {
+        // Example: swapping two integers
+        int a = 10;
+        int b = 20;
+
+        swapNumbers(a, b);
     }
 }
