@@ -11,7 +11,6 @@ produce new sorted sub-lists until there is only one remaining.
 Time Complexity: O(n log n) in all cases (best, average, worst)
 Space Complexity: O(n) - requires additional space for temporary arrays
 
-Author: Kartikeya Nainkhwal
 """
 
 
