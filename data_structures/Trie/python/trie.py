@@ -1,8 +1,6 @@
 """
 Trie (Prefix Tree) implementation in Python.
 
-File: data_structures/Trie/python/trie.py
-
 Implements:
  - insert(word)        : inserts a word into the Trie
  - search(word)        : checks if a full word exists in the Trie
@@ -49,7 +47,6 @@ class Trie:
         """
         node = self.root
         for char in word:
-            # If the character is not in the current node's children, add it
             if char not in node.children:
                 node.children[char] = TrieNode()
             node = node.children[char]
@@ -101,7 +98,7 @@ if __name__ == "__main__":
     print("Search 'appl':", trie.search("appl"))        # False
     print("Starts with 'ap':", trie.starts_with("ap"))  # True
     print("Starts with 'ba':", trie.starts_with("ba"))  # True
-    print("Starts with 'cat':", trie.starts_with("cat"))# False
+    print("Starts with 'cat':", trie.starts_with("cat"))  # False
 
 
 """
