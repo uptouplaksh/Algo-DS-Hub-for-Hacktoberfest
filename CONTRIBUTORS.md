@@ -86,26 +86,26 @@ Thanks to all these amazing people for contributing to this project 💖
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/amit-123-max">
-                    <img src="https://avatars.githubusercontent.com/u/183510277?v=4" width="100;" alt="amit-123-max"/>
-                    <br />
-                    <sub><b>amit-123-max</b></sub>
-                </a>
-            </td>
-		</tr>
-		<tr>
-            <td align="center">
                 <a href="https://github.com/sonata22">
                     <img src="https://avatars.githubusercontent.com/u/112934863?v=4" width="100;" alt="sonata22"/>
                     <br />
                     <sub><b>Nataliia Sosnovshchenko</b></sub>
                 </a>
             </td>
+		</tr>
+		<tr>
             <td align="center">
-                <a href="https://github.com/SajalGarg035">
-                    <img src="https://avatars.githubusercontent.com/u/164674816?v=4" width="100;" alt="SajalGarg035"/>
+                <a href="https://github.com/amit-123-max">
+                    <img src="https://avatars.githubusercontent.com/u/183510277?v=4" width="100;" alt="amit-123-max"/>
                     <br />
-                    <sub><b>Sajal Garg</b></sub>
+                    <sub><b>amit-123-max</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/sebyx07">
+                    <img src="https://avatars.githubusercontent.com/u/5052549?v=4" width="100;" alt="sebyx07"/>
+                    <br />
+                    <sub><b>S</b></sub>
                 </a>
             </td>
             <td align="center">
@@ -116,10 +116,10 @@ Thanks to all these amazing people for contributing to this project 💖
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/sebyx07">
-                    <img src="https://avatars.githubusercontent.com/u/5052549?v=4" width="100;" alt="sebyx07"/>
+                <a href="https://github.com/SajalGarg035">
+                    <img src="https://avatars.githubusercontent.com/u/164674816?v=4" width="100;" alt="SajalGarg035"/>
                     <br />
-                    <sub><b>S</b></sub>
+                    <sub><b>Sajal Garg</b></sub>
                 </a>
             </td>
             <td align="center">
