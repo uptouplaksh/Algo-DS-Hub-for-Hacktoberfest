@@ -1,39 +1,30 @@
 """
-Trie (Prefix Tree) implementation in Python.
+Trie (Prefix Tree) Implementation in Python.
+A Trie is a tree-like data structure that stores a dynamic set of strings, usually for retrieval by prefix.
+Each node represents a character of a word. Words are inserted character by character, which allows for efficient prefix searches.
+Time Complexity (Average Case):
+Insert: O(L), where L is the length of the word
+Search: O(L)
+Starts with: O(P), where P is the length of the prefix
 
-Implements:
- - insert(word)        : inserts a word into the Trie
- - search(word)        : checks if a full word exists in the Trie
- - starts_with(prefix) : checks if any word in the Trie starts with the given prefix
-
-Usage:
-  Place this file as instructed and run:
-    python trie.py
-  It will run a small example and print outputs.
-
-Complexity:
- - Insert: O(L)       where L is the length of the word
- - Search: O(L)       where L is the length of the word
- - Starts with: O(P)  where P is the length of the prefix
+Space Complexity: O(N * L), where N is the number of words and L is the average length of the words.
 """
-# (No invalid escape sequences present.)
 
 class TrieNode:
     """
-    A TrieNode represents each character node in the Trie.
+    A node in the Trie.
     Each node stores:
-    - children: a dictionary mapping characters to TrieNodes
-    - is_end_of_word: boolean to mark the end of a valid word
+    - children: a dictionary mapping characters to child TrieNodes
+    - is_end_of_word: boolean indicating if the node is the end of a valid word
     """
     def __init__(self):
         self.children = {}
         self.is_end_of_word = False
 
-
 class Trie:
     """
     Trie (Prefix Tree) implementation.
-    Supports insertion of words, search for full words, and prefix matching.
+    Supports insert, search, and prefix-matching (starts_with).
     """
     def __init__(self):
         self.root = TrieNode()
@@ -50,11 +41,11 @@ class Trie:
             if char not in node.children:
                 node.children[char] = TrieNode()
             node = node.children[char]
-        node.is_end_of_word = True  # Mark the end of the word
+        node.is_end_of_word = True
 
     def search(self, word: str) -> bool:
         """
-        Searches for a full word in the Trie.
+        Searches for a complete word in the Trie.
 
         Args:
             word (str): The word to search.
@@ -86,9 +77,13 @@ class Trie:
             node = node.children[char]
         return True
 
-
+# -------------------------------
+# Runnable example block
+# -------------------------------
 if __name__ == "__main__":
     trie = Trie()
+
+    # Insert some words
     trie.insert("apple")
     trie.insert("app")
     trie.insert("bat")
@@ -99,7 +94,6 @@ if __name__ == "__main__":
     print("Starts with 'ap':", trie.starts_with("ap"))  # True
     print("Starts with 'ba':", trie.starts_with("ba"))  # True
     print("Starts with 'cat':", trie.starts_with("cat"))  # False
-
 
 """
 📌 How the Trie is built for ["apple", "app", "bat"]
@@ -120,34 +114,5 @@ root
 ✔ "app" ends at the second 'p'
 ✔ "apple" continues further down to 'e'
 ✔ "bat" starts a new branch from 'b'
+
 """
-
-# 🔹 Trie Use Cases in DSA (Short Version)
-
-# 1. Prefix Queries
-# - Count or find words starting with a given prefix
-# Example: starts_with("pre")
-
-# 2. Autocomplete / Suggestions
-# - Return all words starting with a prefix
-# Example: search suggestions in IDE or search engines
-
-# 3. Longest Common Prefix
-# - Find the longest prefix among a list of strings
-# Example: ["flower","flow","flight"] -> "fl"
-
-# 4. Word Search in 2D Grid
-# - Check if words from a dictionary exist in a grid
-# Example: Leetcode Word Search II, Boggle game
-
-# 5. Count Unique Substrings
-# - Build Trie with all suffixes to count unique substrings
-
-# 6. Max XOR / Bitwise Problems
-# - Store binary of numbers to compute maximum XOR efficiently
-
-# 7. Spell Checker / Dictionary Validation
-# - Check word existence or suggest corrections
-
-# 8. Compression / String Matching
-# - Efficient storage and search for large dictionaries
