@@ -16,7 +16,7 @@ Complexity:
  - Search: O(L)       where L is the length of the word
  - Starts with: O(P)  where P is the length of the prefix
 """
-
+# (No invalid escape sequences present.)
 
 class TrieNode:
     """
@@ -121,7 +121,6 @@ root
 ✔ "apple" continues further down to 'e'
 ✔ "bat" starts a new branch from 'b'
 """
-
 
 # 🔹 Trie Use Cases in DSA (Short Version)
 
