@@ -28,6 +28,7 @@ def reverse_bits(n: int) -> int:
             - Right shift n by 1 to process the next bit.
     """
     result = 0
+    n = n & 0xFFFFFFFF
     for _ in range(32):
         result = (result << 1) | (n & 1)
         n >>= 1
@@ -35,7 +36,6 @@ def reverse_bits(n: int) -> int:
 
 
 if __name__ == "__main__":
-    # Example usage
     num = 43261596
     print(f"Input Number: {num}")
     print(f"Reversed Bits Output: {reverse_bits(num)}")
