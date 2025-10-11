@@ -211,17 +211,17 @@ Thanks to all these amazing people for contributing to this project 💖
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/Ruturaj-007">
-                    <img src="https://avatars.githubusercontent.com/u/157049145?v=4" width="100;" alt="Ruturaj-007"/>
-                    <br />
-                    <sub><b>Ruturaj Pawar</b></sub>
-                </a>
-            </td>
-            <td align="center">
                 <a href="https://github.com/vannu07">
                     <img src="https://avatars.githubusercontent.com/u/161148074?v=4" width="100;" alt="vannu07"/>
                     <br />
                     <sub><b>VARNIT KUMAR</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/Ruturaj-007">
+                    <img src="https://avatars.githubusercontent.com/u/157049145?v=4" width="100;" alt="Ruturaj-007"/>
+                    <br />
+                    <sub><b>Ruturaj Pawar</b></sub>
                 </a>
             </td>
 		</tr>
@@ -340,6 +340,13 @@ Thanks to all these amazing people for contributing to this project 💖
                     <img src="https://avatars.githubusercontent.com/u/223526536?v=4" width="100;" alt="Ashwil-Colaco"/>
                     <br />
                     <sub><b>Ashwil-Colaco</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/abbasabro">
+                    <img src="https://avatars.githubusercontent.com/u/141827555?v=4" width="100;" alt="abbasabro"/>
+                    <br />
+                    <sub><b>Abbas Abro</b></sub>
                 </a>
             </td>
             <td align="center">
