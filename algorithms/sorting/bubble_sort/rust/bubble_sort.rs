@@ -1,5 +1,12 @@
 use std::io;
 
+/*
+ * Bubble Sort Implementation in Rust
+ *
+ * Time Complexity: O(n^2)
+ * Space Complexity: O(1)
+ */
+
 /// Bubble Sort function
 /// Sorts a mutable slice in ascending order
 fn bubble_sort<T: PartialOrd>(arr: &mut [T]) {
