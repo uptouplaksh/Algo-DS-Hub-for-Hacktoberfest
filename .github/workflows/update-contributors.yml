@@ -1,0 +1,28 @@
+name: Update Contributors
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update-contributors:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Generate contributors list
+        uses: akhilmhdh/contributors-readme-action@v2.3.10
+        with:
+          image_size: 100
+          readme_path: CONTRIBUTORS.md
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: update CONTRIBUTORS.md"
+          branch: main
