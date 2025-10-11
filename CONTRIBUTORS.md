@@ -86,21 +86,14 @@ Thanks to all these amazing people for contributing to this project 💖
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/SajalGarg035">
-                    <img src="https://avatars.githubusercontent.com/u/164674816?v=4" width="100;" alt="SajalGarg035"/>
-                    <br />
-                    <sub><b>Sajal Garg</b></sub>
-                </a>
-            </td>
-		</tr>
-		<tr>
-            <td align="center">
                 <a href="https://github.com/sonata22">
                     <img src="https://avatars.githubusercontent.com/u/112934863?v=4" width="100;" alt="sonata22"/>
                     <br />
                     <sub><b>Nataliia Sosnovshchenko</b></sub>
                 </a>
             </td>
+		</tr>
+		<tr>
             <td align="center">
                 <a href="https://github.com/amit-123-max">
                     <img src="https://avatars.githubusercontent.com/u/183510277?v=4" width="100;" alt="amit-123-max"/>
@@ -120,6 +113,13 @@ Thanks to all these amazing people for contributing to this project 💖
                     <img src="https://avatars.githubusercontent.com/u/156334435?v=4" width="100;" alt="Jivi-this-side"/>
                     <br />
                     <sub><b>Dithi</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/SajalGarg035">
+                    <img src="https://avatars.githubusercontent.com/u/164674816?v=4" width="100;" alt="SajalGarg035"/>
+                    <br />
+                    <sub><b>Sajal Garg</b></sub>
                 </a>
             </td>
             <td align="center">
