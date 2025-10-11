@@ -1,1 +1,102 @@
+# ----------------------------
+# Global
+# ----------------------------
+# OS-specific files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+Desktop.ini
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# Node.js / JavaScript
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+dist/
+build/
+.env
+.env.*
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.pdb
+*.pkl
+*.egg-info/
+.eggs/
+.Python
+env/
+venv/
+ENV/
+venv.bak/
+*.log
+
+# Java
 *.class
+*.jar
+*.war
+*.ear
+*.nar
+*.zip
+*.tar.gz
+*.rar
+hs_err_pid*
+replay_pid*
+
+# C++
+*.exe
+*.out
+*.o
+*.obj
+*.so
+*.dll
+*.a
+*.lib
+*.pdb
+
+# Misc / Generated
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# Coverage / Testing
+coverage/
+.coverage
+.cache/
+.pytest_cache/
+nosetests.xml
+junit.xml
+test-output/
+reports/
+
+# Ignore user-specific local configs
+local.settings.json
+*.iml
+
+# ----------------------------
+# Optional - uncomment if needed
+# ----------------------------
+# .env.local
+# .history/
+# .mypy_cache/
+# .tox/
+# .nox/
+
