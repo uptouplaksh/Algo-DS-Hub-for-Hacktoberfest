@@ -254,10 +254,6 @@ data_structures
     └── python
         └── avl_tree.py
 ```
-### How to Get Started
-
-Ready to contribute? Please read our official [**Contributing Guidelines (CONTRIBUTING.md)**](CONTRIBUTING.md) for a full step-by-step tutorial on how to submit your work.
-contributor/Post-order-traversal
 
 ## License
 
