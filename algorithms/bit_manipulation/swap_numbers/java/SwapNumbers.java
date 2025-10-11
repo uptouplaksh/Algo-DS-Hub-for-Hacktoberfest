@@ -1,5 +1,10 @@
 // This class provides a method to swap two integer variables without using a temporary variable, employing the bitwise XOR operation.
-
+/*
+ * Swaps two integer variables without using a temporary variable, using the bitwise XOR algorithm.
+ *
+ * Time Complexity: O(1), as the number of operations is constant.
+ * Space Complexity: O(1), as no extra space is used.
+ */
 public class SwapNumbers {
 
     /*
