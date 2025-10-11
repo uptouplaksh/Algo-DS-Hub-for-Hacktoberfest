@@ -70,6 +70,9 @@ algorithms
 │   ├── product_except_self
 │   │   └── python
 │   │       └── product.py
+│   ├── rotate
+│   │   └── python
+│   │       └── rotate_array.py
 │   ├── sliding_window_max
 │   │   └── python
 │   │       └── sliding_window.py
@@ -97,8 +100,6 @@ algorithms
 │   └── swap_numbers
 │       └── java
 │           └── SwapNumbers.java
-├── Depth-First Search (DFS)
-│   └── dfs.py
 ├── dynamic_programming
 │   ├── coin_change
 │   │   └── javascript
@@ -141,13 +142,10 @@ algorithms
 │   ├── gcd
 │   │   └── c_plus_plus
 │   │       └── gcd.cpp
-│   ├── integer_to_roman
-│   │   └── IntegerToRoman.java
+│   ├── power
+│   │   └── python
+│   │       └── power.py
 │   └── README.md
-├── Puzzle
-│   └── tower of hanoi
-│       └── python
-│           └── tower of hanoi.py
 ├── README.md
 ├── searching
 │   ├── binary_search
@@ -183,9 +181,6 @@ algorithms
 │   │   │   └── InsertionSort.java
 │   │   └── python
 │   │       └── insertion_sort.py
-│   ├── quick_sort
-│   │   └── javascript
-│   │       └── Quick_Sort.js
 │   ├── radix_sort
 │   │   └── c_plus_plus
 │   │       └── radix_sort.cpp
@@ -196,8 +191,6 @@ algorithms
 │   ├── anagram
 │   │   └── python
 │   │       └── anagram.py
-│   ├── first_non_repeating
-│   │   └── FirstNonRepeating.java
 │   ├── group_anagrams
 │   │   └── python
 │   │       └── group_anagrams.py
@@ -245,17 +238,6 @@ data_structures
 ├── heap
 │   └── python
 │       └── min_heap.py
-├── LInked_List
-│   ├── c_plus_plus
-│   │   └── doubly_linked_list.cpp
-│   └── python
-│       ├── interactive_demo.py
-│       ├── java
-│       │   └── CircularLinkedList.java
-│       └── singly_linked_list.py
-├── longest_palindrome
-│   └── python
-│       └── longest_palindrome.py
 ├── Queue
 │   └── Python
 │       └── queue_using_stack.py
@@ -264,6 +246,8 @@ data_structures
 │   └── C
 │       └── stack.c
 ├── Stack
+│   ├── javascript
+│   │   └── Stack.js
 │   └── python
 │       └── stack.py
 └── tree
