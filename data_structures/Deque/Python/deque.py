@@ -2,16 +2,30 @@
 Deque (Double-Ended Queue) Implementation in Python
 ---------------------------------------------------
 A Deque allows insertion and deletion of elements from both the front and rear ends.
-This is useful for scenarios like palindrome checking, sliding window problems, and caching.
+This implementation uses the built-in `collections.deque` class, which provides
+O(1) time complexity for append and pop operations from both ends.
+
+🧠 Time Complexity:
+    - add_front(): O(1)
+    - add_rear(): O(1)
+    - remove_front(): O(1)
+    - remove_rear(): O(1)
+    - is_empty(): O(1)
+    - size(): O(1)
+
+💾 Space Complexity:
+    - O(n), where n is the number of elements in the deque.
 
 """
+
+from collections import deque
 
 class Deque:
     """A class representing a Double-Ended Queue (Deque)."""
 
     def __init__(self):
-        """Initialize an empty deque using a Python list."""
-        self.items = []
+        """Initialize an empty deque using collections.deque."""
+        self.items = deque()
 
     def is_empty(self):
         """Check if the deque is empty.
@@ -27,7 +41,7 @@ class Deque:
         Args:
             item: Element to be added to the front.
         """
-        self.items.insert(0, item)
+        self.items.appendleft(item)
 
     def add_rear(self, item):
         """Add an item to the rear (end) of the deque.
@@ -48,7 +62,7 @@ class Deque:
         """
         if self.is_empty():
             raise IndexError("Deque is empty. Cannot remove from front.")
-        return self.items.pop(0)
+        return self.items.popleft()
 
     def remove_rear(self):
         """Remove and return an item from the rear of the deque.
@@ -74,7 +88,7 @@ class Deque:
 
 if __name__ == "__main__":
     # 🧪 Example usage of Deque class
-    print(" Demonstrating Deque Data Structure\n")
+    print("☕ Demonstrating Efficient Deque Implementation\n")
 
     dq = Deque()
 
@@ -82,20 +96,21 @@ if __name__ == "__main__":
     dq.add_rear(10)
     dq.add_rear(20)
     dq.add_rear(30)
-    print("Current Deque:", dq.items)
+    print("Current Deque:", list(dq.items))
 
     print("\nAdding element to front: 5")
     dq.add_front(5)
-    print("Current Deque:", dq.items)
+    print("Current Deque:", list(dq.items))
 
     print("\nRemoving element from rear:", dq.remove_rear())
-    print("Current Deque:", dq.items)
+    print("Current Deque:", list(dq.items))
 
     print("\nRemoving element from front:", dq.remove_front())
-    print("Current Deque:", dq.items)
+    print("Current Deque:", list(dq.items))
 
     print("\nIs deque empty?", dq.is_empty())
     print("Size of deque:", dq.size())
+
 
 """
 Example Output:
