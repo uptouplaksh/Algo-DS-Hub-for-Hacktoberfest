@@ -13,77 +13,78 @@ on:
 permissions:
   contents: read
   pull-requests: write
-  issues: write
+  name: Auto Labeler
 
-jobs:
-  auto-label:
-    runs-on: ubuntu-latest
-    steps:
-      # This step is a standard best practice and may be required for context.
-      - name: Checkout repository
-        uses: actions/checkout@v4
+  on:
+    pull_request_target:
+      types: [opened, synchronize, reopened]
 
-      - name: Auto label PR
-        uses: actions/github-script@v7
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            const { owner, repo } = context.repo;
-            const pr = context.payload.pull_request;
-            if (!pr) {
-              console.log("No pull_request in payload — nothing to do.");
-              return;
-            }
-            const pullNumber = pr.number;
+  permissions:
+    contents: read
+    pull-requests: write
+    issues: write
 
-            // List changed files in the PR
-            const files = await github.paginate(github.rest.pulls.listFiles, {
-              owner,
-              repo,
-              pull_number: pullNumber
-            });
-            console.log(`Found ${files.length} changed files in PR #${pullNumber}`);
-            
-            const labelsToAdd = new Set();
-            
-            for (const file of files) {
-              const filename = file.filename.toLowerCase();
-              console.log(`Checking file: ${filename}`);
-              
-              if (filename.includes('/python/') || filename.endsWith('.py')) {
-                labelsToAdd.add('python');
+  jobs:
+    auto-label:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout repository
+          uses: actions/checkout@v4
+
+        - name: Auto label PR
+          uses: actions/github-script@v7
+          with:
+            github-token: ${{ secrets.GITHUB_TOKEN }}
+            script: |
+              const { owner, repo } = context.repo;
+              const pr = context.payload.pull_request;
+              if (!pr) {
+                console.log("No pull_request in payload — nothing to do.");
+                return;
               }
-              
-              if (filename.includes('/javascript/') || filename.endsWith('.js')) {
-                labelsToAdd.add('javascript');
-              }
-              
-              if (filename.includes('/java/') || filename.endsWith('.java')) {
-                labelsToAdd.add('java');
-              }
-              
-              if (filename.includes('/c_plus_plus/') || filename.endsWith('.cpp') || filename.endsWith('.hpp')) {
-                labelsToAdd.add('c++');
-              }
-              
-              if (filename.endsWith('.md')) {
-                labelsToAdd.add('documentation');
-              }
-            }
-            
-            const labels = Array.from(labelsToAdd);
-            
-            if (labels.length > 0) {
-              console.log(`Adding labels: ${labels.join(', ')}`);
-              
-              await github.rest.issues.addLabels({
+              const pullNumber = pr.number;
+
+              const files = await github.paginate(github.rest.pulls.listFiles, {
                 owner,
                 repo,
-                issue_number: pullNumber,
-                labels: labels
+                pull_number: pullNumber
               });
-              
-              console.log(`Successfully added ${labels.length} label(s) to PR #${pullNumber}`);
-            } else {
-              console.log('No matching labels found for this PR');
-            }
+
+              console.log(`Found ${files.length} changed files in PR #${pullNumber}`);
+              const labelsToAdd = new Set();
+
+              for (const file of files) {
+                const filename = file.filename.toLowerCase();
+                console.log(`Checking file: ${filename}`);
+
+                if (filename.includes('/python/') || filename.endsWith('.py')) {
+                  labelsToAdd.add('python');
+                }
+                if (filename.includes('/javascript/') || filename.endsWith('.js')) {
+                  labelsToAdd.add('javascript');
+                }
+                if (filename.includes('/java/') || filename.endsWith('.java')) {
+                  labelsToAdd.add('java');
+                }
+                if (filename.includes('/c_plus_plus/') || filename.endsWith('.cpp') || filename.endsWith('.hpp')) {
+                  labelsToAdd.add('c++');
+                }
+                if (filename.endsWith('.md')) {
+                  labelsToAdd.add('documentation');
+                }
+              }
+
+              const labels = Array.from(labelsToAdd);
+
+              if (labels.length > 0) {
+                console.log(`Adding labels: ${labels.join(', ')}`);
+                await github.rest.issues.addLabels({
+                  owner,
+                  repo,
+                  issue_number: pullNumber,
+                  labels: labels
+                });
+                console.log(`Successfully added ${labels.length} label(s) to PR #${pullNumber}`);
+              } else {
+                console.log('No matching labels found for this PR');
+              }
