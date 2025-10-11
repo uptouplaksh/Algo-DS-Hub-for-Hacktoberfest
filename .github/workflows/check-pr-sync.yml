@@ -1,7 +1,7 @@
 name: Check PR Sync Status
 
 on:
-  pull_request:
+  pull_request_target:
     types: [opened, synchronize, reopened]
 
 permissions:
@@ -48,6 +48,7 @@ jobs:
       - name: Post comment if behind
         if: steps.check-behind.outputs.behind == 'true'
         uses: actions/github-script@v7
+        continue-on-error: true
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
@@ -97,34 +98,42 @@ jobs:
             
             Once your branch is updated, any merge conflicts will need to be resolved. Feel free to ask if you have any questions! 💡`;
             
-            // Check if we've already posted this comment
-            const { data: comments } = await github.rest.issues.listComments({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: context.payload.pull_request.number,
-            });
-            
-            const botComment = comments.find(comment => 
-              comment.user.type === 'Bot' && 
-              comment.body.includes('automated check has detected that your branch is')
-            );
-            
-            if (botComment) {
-              // Update existing comment
-              await github.rest.issues.updateComment({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                comment_id: botComment.id,
-                body: comment
-              });
-            } else {
-              // Post new comment
-              await github.rest.issues.createComment({
+            try {
+              // Check if we've already posted this comment
+              const { data: comments } = await github.rest.issues.listComments({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 issue_number: context.payload.pull_request.number,
-                body: comment
               });
+              
+              const botComment = comments.find(comment => 
+                comment.user.type === 'Bot' && 
+                comment.body.includes('automated check has detected that your branch is')
+              );
+              
+              if (botComment) {
+                // Update existing comment
+                await github.rest.issues.updateComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  comment_id: botComment.id,
+                  body: comment
+                });
+                console.log('✅ Updated existing comment');
+              } else {
+                // Post new comment
+                await github.rest.issues.createComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: context.payload.pull_request.number,
+                  body: comment
+                });
+                console.log('✅ Posted new comment');
+              }
+            } catch (error) {
+              console.log('⚠️ Could not post comment (this is expected for PRs from forks)');
+              console.log('The PR is still detected as behind by ${commitsCount} commit(s)');
+              core.setFailed('PR is ${commitsCount} commit(s) behind main. Please sync your fork.');
             }
       
       - name: Log sync status
