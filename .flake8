@@ -1,0 +1,25 @@
+[flake8]
+# Set the max line length to be consistent with 'black'
+max-line-length = 88
+
+# Set a reasonable complexity limit for functions
+max-complexity = 10
+
+# List of folders to IGNORE
+# This prevents the linter from checking virtual environments, etc.
+exclude =
+    .git,
+    __pycache__,
+    env,
+    venv,
+    .eggs
+
+# List of specific error codes to IGNORE
+# This stops the linter from failing on minor rules.
+# E302 = expected 2 blank lines, found 1
+# W292 = no newline at end of file
+# E501 = line too long (handled by black)
+ignore =
+    E302,
+    W292,
+    E501

@@ -29,11 +29,10 @@ jobs:
           pip install flake8 black
 
       # Step 4: Run flake8 for linting
-      - name: Run flake8 (style & syntax check)
+      - name: Run flake8 linter
         run: |
-          echo "Running flake8..."
-          flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-          flake8 . --count --max-complexity=10 --max-line-length=88 --statistics
+          # flake8 will automatically discover and use the .flake8 configuration file
+          flake8 .
 
       # Step 5: Run black in check mode
       - name: Run black (format check)
