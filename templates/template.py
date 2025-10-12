@@ -18,4 +18,4 @@ def placeholder_function():
 
 if __name__ == "__main__":
     # Example usage
-    print(placeholder_function())
+    placeholder_function()
