@@ -1,9 +1,9 @@
 name: Update Contributors
 
 on:
-  push:
-    branches:
-      - main
+  schedule:
+    # This runs once every day at midnight UTC (around 5:30 AM in India).
+    - cron: '0 0 * * *'
   workflow_dispatch:
 
 jobs:

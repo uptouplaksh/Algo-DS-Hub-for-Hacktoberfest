@@ -95,10 +95,10 @@ Thanks to all these amazing people for contributing to this project 💖
 		</tr>
 		<tr>
             <td align="center">
-                <a href="https://github.com/sonata22">
-                    <img src="https://avatars.githubusercontent.com/u/112934863?v=4" width="100;" alt="sonata22"/>
+                <a href="https://github.com/amit-123-max">
+                    <img src="https://avatars.githubusercontent.com/u/183510277?v=4" width="100;" alt="amit-123-max"/>
                     <br />
-                    <sub><b>Nataliia Sosnovshchenko</b></sub>
+                    <sub><b>amit-123-max</b></sub>
                 </a>
             </td>
             <td align="center">
@@ -129,6 +129,8 @@ Thanks to all these amazing people for contributing to this project 💖
                     <sub><b>akanksha n.</b></sub>
                 </a>
             </td>
+		</tr>
+		<tr>
             <td align="center">
                 <a href="https://github.com/Mennatallah9">
                     <img src="https://avatars.githubusercontent.com/u/72235546?v=4" width="100;" alt="Mennatallah9"/>
@@ -136,13 +138,18 @@ Thanks to all these amazing people for contributing to this project 💖
                     <sub><b>Mennatallah Ashraf</b></sub>
                 </a>
             </td>
-		</tr>
-		<tr>
             <td align="center">
                 <a href="https://github.com/SnehalBawanthade">
                     <img src="https://avatars.githubusercontent.com/u/143216535?v=4" width="100;" alt="SnehalBawanthade"/>
                     <br />
                     <sub><b>Snehal Bawanthade</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/JashSanka">
+                    <img src="https://avatars.githubusercontent.com/u/211646070?v=4" width="100;" alt="JashSanka"/>
+                    <br />
+                    <sub><b>Jash Sanka</b></sub>
                 </a>
             </td>
             <td align="center">
@@ -166,6 +173,8 @@ Thanks to all these amazing people for contributing to this project 💖
                     <sub><b>Tyler Waite</b></sub>
                 </a>
             </td>
+		</tr>
+		<tr>
             <td align="center">
                 <a href="https://github.com/mohit-22">
                     <img src="https://avatars.githubusercontent.com/u/183510328?v=4" width="100;" alt="mohit-22"/>
@@ -180,8 +189,6 @@ Thanks to all these amazing people for contributing to this project 💖
                     <sub><b>Asit Wasnik</b></sub>
                 </a>
             </td>
-		</tr>
-		<tr>
             <td align="center">
                 <a href="https://github.com/AMIT20-P">
                     <img src="https://avatars.githubusercontent.com/u/216828285?v=4" width="100;" alt="AMIT20-P"/>
@@ -204,20 +211,6 @@ Thanks to all these amazing people for contributing to this project 💖
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/Neevs1">
-                    <img src="https://avatars.githubusercontent.com/u/78549886?v=4" width="100;" alt="Neevs1"/>
-                    <br />
-                    <sub><b>Neevs1</b></sub>
-                </a>
-            </td>
-            <td align="center">
-                <a href="https://github.com/vannu07">
-                    <img src="https://avatars.githubusercontent.com/u/161148074?v=4" width="100;" alt="vannu07"/>
-                    <br />
-                    <sub><b>VARNIT KUMAR</b></sub>
-                </a>
-            </td>
-            <td align="center">
                 <a href="https://github.com/Ruturaj-007">
                     <img src="https://avatars.githubusercontent.com/u/157049145?v=4" width="100;" alt="Ruturaj-007"/>
                     <br />
@@ -226,6 +219,13 @@ Thanks to all these amazing people for contributing to this project 💖
             </td>
 		</tr>
 		<tr>
+            <td align="center">
+                <a href="https://github.com/Neevs1">
+                    <img src="https://avatars.githubusercontent.com/u/78549886?v=4" width="100;" alt="Neevs1"/>
+                    <br />
+                    <sub><b>Neevs1</b></sub>
+                </a>
+            </td>
             <td align="center">
                 <a href="https://github.com/mukkss">
                     <img src="https://avatars.githubusercontent.com/u/149927808?v=4" width="100;" alt="mukkss"/>
@@ -261,6 +261,8 @@ Thanks to all these amazing people for contributing to this project 💖
                     <sub><b>Swayam Mishra</b></sub>
                 </a>
             </td>
+		</tr>
+		<tr>
             <td align="center">
                 <a href="https://github.com/Shubham15986">
                     <img src="https://avatars.githubusercontent.com/u/168961429?v=4" width="100;" alt="Shubham15986"/>
@@ -268,8 +270,6 @@ Thanks to all these amazing people for contributing to this project 💖
                     <sub><b>Shubham15986</b></sub>
                 </a>
             </td>
-		</tr>
-		<tr>
             <td align="center">
                 <a href="https://github.com/preeti712">
                     <img src="https://avatars.githubusercontent.com/u/141026984?v=4" width="100;" alt="preeti712"/>
@@ -305,6 +305,8 @@ Thanks to all these amazing people for contributing to this project 💖
                     <sub><b>Jatin Vishwakarma</b></sub>
                 </a>
             </td>
+		</tr>
+		<tr>
             <td align="center">
                 <a href="https://github.com/NihaalNO">
                     <img src="https://avatars.githubusercontent.com/u/175286773?v=4" width="100;" alt="NihaalNO"/>
@@ -312,8 +314,6 @@ Thanks to all these amazing people for contributing to this project 💖
                     <sub><b>nihaal_n_o</b></sub>
                 </a>
             </td>
-		</tr>
-		<tr>
             <td align="center">
                 <a href="https://github.com/DevendraMane">
                     <img src="https://avatars.githubusercontent.com/u/140258830?v=4" width="100;" alt="DevendraMane"/>
@@ -349,6 +349,8 @@ Thanks to all these amazing people for contributing to this project 💖
                     <sub><b>Abbas Abro</b></sub>
                 </a>
             </td>
+		</tr>
+		<tr>
             <td align="center">
                 <a href="https://github.com/17GuptaIshita">
                     <img src="https://avatars.githubusercontent.com/u/155419918?v=4" width="100;" alt="17GuptaIshita"/>
