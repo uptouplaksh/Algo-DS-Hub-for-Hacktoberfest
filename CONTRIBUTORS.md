@@ -86,14 +86,21 @@ Thanks to all these amazing people for contributing to this project 💖
                 </a>
             </td>
             <td align="center">
+                <a href="https://github.com/vannu07">
+                    <img src="https://avatars.githubusercontent.com/u/161148074?v=4" width="100;" alt="vannu07"/>
+                    <br />
+                    <sub><b>VARNIT KUMAR</b></sub>
+                </a>
+            </td>
+		</tr>
+		<tr>
+            <td align="center">
                 <a href="https://github.com/sonata22">
                     <img src="https://avatars.githubusercontent.com/u/112934863?v=4" width="100;" alt="sonata22"/>
                     <br />
                     <sub><b>Nataliia Sosnovshchenko</b></sub>
                 </a>
             </td>
-		</tr>
-		<tr>
             <td align="center">
                 <a href="https://github.com/amit-123-max">
                     <img src="https://avatars.githubusercontent.com/u/183510277?v=4" width="100;" alt="amit-123-max"/>
@@ -129,6 +136,8 @@ Thanks to all these amazing people for contributing to this project 💖
                     <sub><b>akanksha n.</b></sub>
                 </a>
             </td>
+		</tr>
+		<tr>
             <td align="center">
                 <a href="https://github.com/Mennatallah9">
                     <img src="https://avatars.githubusercontent.com/u/72235546?v=4" width="100;" alt="Mennatallah9"/>
@@ -136,8 +145,6 @@ Thanks to all these amazing people for contributing to this project 💖
                     <sub><b>Mennatallah Ashraf</b></sub>
                 </a>
             </td>
-		</tr>
-		<tr>
             <td align="center">
                 <a href="https://github.com/SnehalBawanthade">
                     <img src="https://avatars.githubusercontent.com/u/143216535?v=4" width="100;" alt="SnehalBawanthade"/>
@@ -173,6 +180,8 @@ Thanks to all these amazing people for contributing to this project 💖
                     <sub><b>Tyler Waite</b></sub>
                 </a>
             </td>
+		</tr>
+		<tr>
             <td align="center">
                 <a href="https://github.com/mohit-22">
                     <img src="https://avatars.githubusercontent.com/u/183510328?v=4" width="100;" alt="mohit-22"/>
@@ -180,8 +189,6 @@ Thanks to all these amazing people for contributing to this project 💖
                     <sub><b>mohit-22</b></sub>
                 </a>
             </td>
-		</tr>
-		<tr>
             <td align="center">
                 <a href="https://github.com/asit2004">
                     <img src="https://avatars.githubusercontent.com/u/147316493?v=4" width="100;" alt="asit2004"/>
@@ -211,26 +218,19 @@ Thanks to all these amazing people for contributing to this project 💖
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/Neevs1">
-                    <img src="https://avatars.githubusercontent.com/u/78549886?v=4" width="100;" alt="Neevs1"/>
+                <a href="https://github.com/Ruturaj-007">
+                    <img src="https://avatars.githubusercontent.com/u/157049145?v=4" width="100;" alt="Ruturaj-007"/>
                     <br />
-                    <sub><b>Neevs1</b></sub>
-                </a>
-            </td>
-            <td align="center">
-                <a href="https://github.com/vannu07">
-                    <img src="https://avatars.githubusercontent.com/u/161148074?v=4" width="100;" alt="vannu07"/>
-                    <br />
-                    <sub><b>VARNIT KUMAR</b></sub>
+                    <sub><b>Ruturaj Pawar</b></sub>
                 </a>
             </td>
 		</tr>
 		<tr>
             <td align="center">
-                <a href="https://github.com/Ruturaj-007">
-                    <img src="https://avatars.githubusercontent.com/u/157049145?v=4" width="100;" alt="Ruturaj-007"/>
+                <a href="https://github.com/Neevs1">
+                    <img src="https://avatars.githubusercontent.com/u/78549886?v=4" width="100;" alt="Neevs1"/>
                     <br />
-                    <sub><b>Ruturaj Pawar</b></sub>
+                    <sub><b>Neevs1</b></sub>
                 </a>
             </td>
             <td align="center">
