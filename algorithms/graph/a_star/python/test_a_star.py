@@ -1,9 +1,4 @@
-"""
-unit tests for A* search algorithm
-
-Time Complexity: O(E log V) per test case
-Space Complexity: O(V) per test case
-"""
+""" Unit tests for the A* search algorithm. """
 
 import unittest
 from a_star import a_star
@@ -129,7 +124,7 @@ class TestAStarSearch(unittest.TestCase):
         self.assertEqual(path[0], 'S')
         self.assertEqual(path[-1], 'G')
         # A* should find the shortest path
-        # expected: S → A → B → C → D → G or similar optimal path
+        self.assertEqual(path,['S','A','B','C','G'])
 
 
 if __name__ == '__main__':
