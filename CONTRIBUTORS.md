@@ -86,26 +86,26 @@ Thanks to all these amazing people for contributing to this project 💖
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/amit-123-max">
-                    <img src="https://avatars.githubusercontent.com/u/183510277?v=4" width="100;" alt="amit-123-max"/>
-                    <br />
-                    <sub><b>amit-123-max</b></sub>
-                </a>
-            </td>
-		</tr>
-		<tr>
-            <td align="center">
                 <a href="https://github.com/sonata22">
                     <img src="https://avatars.githubusercontent.com/u/112934863?v=4" width="100;" alt="sonata22"/>
                     <br />
                     <sub><b>Nataliia Sosnovshchenko</b></sub>
                 </a>
             </td>
+		</tr>
+		<tr>
             <td align="center">
-                <a href="https://github.com/SajalGarg035">
-                    <img src="https://avatars.githubusercontent.com/u/164674816?v=4" width="100;" alt="SajalGarg035"/>
+                <a href="https://github.com/amit-123-max">
+                    <img src="https://avatars.githubusercontent.com/u/183510277?v=4" width="100;" alt="amit-123-max"/>
                     <br />
-                    <sub><b>Sajal Garg</b></sub>
+                    <sub><b>amit-123-max</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/sebyx07">
+                    <img src="https://avatars.githubusercontent.com/u/5052549?v=4" width="100;" alt="sebyx07"/>
+                    <br />
+                    <sub><b>S</b></sub>
                 </a>
             </td>
             <td align="center">
@@ -116,10 +116,10 @@ Thanks to all these amazing people for contributing to this project 💖
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/sebyx07">
-                    <img src="https://avatars.githubusercontent.com/u/5052549?v=4" width="100;" alt="sebyx07"/>
+                <a href="https://github.com/SajalGarg035">
+                    <img src="https://avatars.githubusercontent.com/u/164674816?v=4" width="100;" alt="SajalGarg035"/>
                     <br />
-                    <sub><b>S</b></sub>
+                    <sub><b>Sajal Garg</b></sub>
                 </a>
             </td>
             <td align="center">
@@ -143,6 +143,13 @@ Thanks to all these amazing people for contributing to this project 💖
                     <img src="https://avatars.githubusercontent.com/u/143216535?v=4" width="100;" alt="SnehalBawanthade"/>
                     <br />
                     <sub><b>Snehal Bawanthade</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/JashSanka">
+                    <img src="https://avatars.githubusercontent.com/u/211646070?v=4" width="100;" alt="JashSanka"/>
+                    <br />
+                    <sub><b>Jash Sanka</b></sub>
                 </a>
             </td>
             <td align="center">
@@ -173,6 +180,8 @@ Thanks to all these amazing people for contributing to this project 💖
                     <sub><b>mohit-22</b></sub>
                 </a>
             </td>
+		</tr>
+		<tr>
             <td align="center">
                 <a href="https://github.com/asit2004">
                     <img src="https://avatars.githubusercontent.com/u/147316493?v=4" width="100;" alt="asit2004"/>
@@ -180,8 +189,6 @@ Thanks to all these amazing people for contributing to this project 💖
                     <sub><b>Asit Wasnik</b></sub>
                 </a>
             </td>
-		</tr>
-		<tr>
             <td align="center">
                 <a href="https://github.com/AMIT20-P">
                     <img src="https://avatars.githubusercontent.com/u/216828285?v=4" width="100;" alt="AMIT20-P"/>
@@ -217,6 +224,8 @@ Thanks to all these amazing people for contributing to this project 💖
                     <sub><b>VARNIT KUMAR</b></sub>
                 </a>
             </td>
+		</tr>
+		<tr>
             <td align="center">
                 <a href="https://github.com/Ruturaj-007">
                     <img src="https://avatars.githubusercontent.com/u/157049145?v=4" width="100;" alt="Ruturaj-007"/>
@@ -224,8 +233,6 @@ Thanks to all these amazing people for contributing to this project 💖
                     <sub><b>Ruturaj Pawar</b></sub>
                 </a>
             </td>
-		</tr>
-		<tr>
             <td align="center">
                 <a href="https://github.com/mukkss">
                     <img src="https://avatars.githubusercontent.com/u/149927808?v=4" width="100;" alt="mukkss"/>
@@ -261,6 +268,8 @@ Thanks to all these amazing people for contributing to this project 💖
                     <sub><b>Swayam Mishra</b></sub>
                 </a>
             </td>
+		</tr>
+		<tr>
             <td align="center">
                 <a href="https://github.com/Shubham15986">
                     <img src="https://avatars.githubusercontent.com/u/168961429?v=4" width="100;" alt="Shubham15986"/>
@@ -268,8 +277,6 @@ Thanks to all these amazing people for contributing to this project 💖
                     <sub><b>Shubham15986</b></sub>
                 </a>
             </td>
-		</tr>
-		<tr>
             <td align="center">
                 <a href="https://github.com/preeti712">
                     <img src="https://avatars.githubusercontent.com/u/141026984?v=4" width="100;" alt="preeti712"/>
@@ -305,6 +312,8 @@ Thanks to all these amazing people for contributing to this project 💖
                     <sub><b>Jatin Vishwakarma</b></sub>
                 </a>
             </td>
+		</tr>
+		<tr>
             <td align="center">
                 <a href="https://github.com/NihaalNO">
                     <img src="https://avatars.githubusercontent.com/u/175286773?v=4" width="100;" alt="NihaalNO"/>
@@ -312,8 +321,6 @@ Thanks to all these amazing people for contributing to this project 💖
                     <sub><b>nihaal_n_o</b></sub>
                 </a>
             </td>
-		</tr>
-		<tr>
             <td align="center">
                 <a href="https://github.com/DevendraMane">
                     <img src="https://avatars.githubusercontent.com/u/140258830?v=4" width="100;" alt="DevendraMane"/>
@@ -349,6 +356,8 @@ Thanks to all these amazing people for contributing to this project 💖
                     <sub><b>Abbas Abro</b></sub>
                 </a>
             </td>
+		</tr>
+		<tr>
             <td align="center">
                 <a href="https://github.com/17GuptaIshita">
                     <img src="https://avatars.githubusercontent.com/u/155419918?v=4" width="100;" alt="17GuptaIshita"/>
