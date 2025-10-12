@@ -1,4 +1,9 @@
-
+/*
+ * Armstrong Number Checker in C
+ *
+ * Time Complexity: O(log10(n)) or O(d), where d is the number of digits in the number.
+ * Space Complexity: O(1)
+ */
 
 #include <stdio.h>
 #include <math.h>  // Include math library for pow() function
