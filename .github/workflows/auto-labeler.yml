@@ -56,7 +56,7 @@ jobs:
               }
               
               //Java files
-              if (filename.includes('/java/') || filename.includes('\\java\\') || filename.endsWith('.java')) {
+              else if (filename.includes('/java/') || filename.includes('\\java\\') || filename.endsWith('.java')) {
                 labelsToAdd.add('java');
                 console.log('Added java label');
               }
