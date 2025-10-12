@@ -72,3 +72,19 @@ Closes #17
 ## Review Process
 
 Please note that the project maintainer (@YourUsername) will be automatically added as a reviewer to all pull requests. We will do our best to review your contribution within 48 hours. Thank you for your patience!
+
+## Troubleshooting Failing Checks
+
+**"Q: I submitted a PR, but one of the automated checks failed with a red 'X'. What should I do?"**
+
+**A:** Don't worry! This can sometimes happen due to GitHub's security settings for repositories, and it's usually not a problem with your code.
+
+Here's what to do:
+
+1. **Don't panic.** This is a common issue, and it will not block your contribution from being merged if the code is good.  
+2. **Leave a comment.** Please leave a comment on your pull request and tag the maintainer (`@uptouplaksh`) to let them know. For example:  
+   > "@uptouplaksh The `auto-labeler` check failed. Can you please take a look?"  
+3. **Wait for the maintainer.** The maintainer can often fix the issue by manually re-running the job or by applying the labels themselves.
+
+As long as your code is high-quality and follows our guidelines, a failing automated check will not prevent your contribution from being accepted.
+

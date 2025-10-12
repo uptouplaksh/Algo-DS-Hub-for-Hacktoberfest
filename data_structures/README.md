@@ -196,7 +196,9 @@ Enhance your understanding of data structures with these resources:
 - 📊 [Big-O Cheat Sheet](https://www.bigocheatsheet.com/)
 - 📖 [Data Structures - Programiz](https://www.programiz.com/dsa)
 - 🎓 [MIT OpenCourseWare - Introduction to Algorithms](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/)
-
+- 🖥️ [CS50’s Introduction to Computer Science](https://cs50.harvard.edu/x/2025/)– Harvard course covering fundamentals of data structures with interactive exercises.
+- 🎥 [freeCodeCamp – Data Structures & Algorithms Full Course](https://www.youtube.com/watch?v=8hly31xKli0)– Video tutorial covering arrays, linked lists, stacks, queues, trees, and graphs.
+- 📊 [W3Schools DSA Tutorial](https://www.w3schools.com/dsa/) – Interactive tutorials with examples and quizzes to practice data structures
 ---
 
 ## 📋 Quick Reference
