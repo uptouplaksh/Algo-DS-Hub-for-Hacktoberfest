@@ -21,6 +21,12 @@ public class JumpSearch {
      */
     public static int jumpSearch(int[] arr, int x) {
         int n = arr.length;
+        
+        // Handle empty array
+        if (n == 0) {
+            return -1;
+        }
+        
         int step = (int)Math.floor(Math.sqrt(n)); // Optimal block size
         int prev = 0;
 
