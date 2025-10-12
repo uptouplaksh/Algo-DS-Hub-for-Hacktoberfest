@@ -356,6 +356,8 @@ Thanks to all these amazing people for contributing to this project 💖
                     <sub><b>Ishita Gupta</b></sub>
                 </a>
             </td>
+		</tr>
+		<tr>
             <td align="center">
                 <a href="https://github.com/psy_duck1">
                     <img src="https://avatars.githubusercontent.com/u/112345678?v=4" width="100;" alt="psy_duck1"/>
