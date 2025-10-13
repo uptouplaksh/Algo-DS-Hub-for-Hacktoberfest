@@ -1,57 +1,46 @@
 #include <iostream>
-#include <vector>
+#include <cassert>
+#include "fenwick_tree.h"
 using namespace std;
 
-// This runs and compiles using:
+/**
+ * Example demonstration in main().
+ * Input:
+ *   arr = [1, 2, 3, 4, 5]
+ *   Then perform:
+ *     1) Query sum [1, 3]
+ *     2) Add +2 at index 2
+ *     3) Query sum [1, 3] again
+ */
+int main() {
+    BIT<long long> bit(5);
 
-// g++ -std=c++17 fenwick_tree.cpp -o fenwick_tree
-// ./fenwick_tree
+    // Initialize array [1, 2, 3, 4, 5]
+    for (int i = 0; i < 5; i++)
+        bit.set(i, i + 1);
 
-/*
-    Fenwick Tree (Binary Indexed Tree)
-    op:
-    - update(i, delta): add delta at index i
-    - query(i): prefix sum [1..i]
-    - rangeQuery(l, r): sum [l..r]
+    cout << "Initial array: [1, 2, 3, 4, 5]\n";
 
-    time com:  O(log n) per update/query
-    Space comp: O(n)
-*/
-class FenwickTree 
-{
-    vector<int> bit; // 1-based
-    int n;
-    public:
-    explicit FenwickTree(int n) : bit(n + 1, 0), n(n + 1){}
+    // Query 1: sum of [1, 3] (2 + 3 + 4 = 9)
+    cout << "Sum [1, 3] = " << bit.range_sum(1, 3) << "\n";
 
-    void update(int i, int delta) 
-    {
-        for(; i < n; i += (i & -i)) bit[i] += delta;
-    }
-    int query(int i) const 
-    {
-        int sum = 0;
-        for(; i > 0; i -= (i & -i)) sum += bit[i];
-        return sum;
-    }
-    int rangeQuery(int l, int r) const{return query(r) - query(l - 1);}
-};
+    // Update: add +2 at index 2 → arr[2] = 5 now
+    bit.add(2, 2);
+    cout << "Added +2 to index 2.\n";
 
-int main() 
-{
-    int n = 10;
-    FenwickTree ft(n);
+    // Query 2: sum of [1, 3] again (2 + 5 + 4 = 11)
+    cout << "Sum [1, 3] after update = " << bit.range_sum(1, 3) << "\n";
 
-    // 1-based array (arr[0] unused)
-    vector<int> arr = {0, 3, 2, -1, 6, 5, 4, -3, 3, 7, 2};
+    // Verify correctness with assertion
+    assert(bit.range_sum(0, 4) == 1 + 2 + 5 + 4 + 5);
 
-    for(int i = 1; i <= n; ++i) ft.update(i, arr[i]);
-
-    cout << "Prefix sum up to index 5: " << ft.query(5) << '\n'; // 15
-    cout << "Range sum [3, 8]: " << ft.rangeQuery(3, 8) << '\n'; // 14
-
-    ft.update(4, 5); // add +5 at index 4 (6 -> 11)
-    cout << "After updating index 4 by +5, prefix sum up to 5: " << ft.query(5) << '\n'; // 20
-    
-    return 0;
+    cout << "All operations completed successfully.\n";
 }
+/*
+Example Output:
+Initial array: [1, 2, 3, 4, 5]
+Sum [1, 3] = 9
+Added +2 to index 2.
+Sum [1, 3] after update = 11
+All operations completed successfully.
+*/

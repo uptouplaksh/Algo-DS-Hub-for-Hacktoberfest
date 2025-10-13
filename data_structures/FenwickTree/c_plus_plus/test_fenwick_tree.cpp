@@ -1,7 +1,7 @@
 #include <iostream>
-#include <vector>
 #include <cassert>
 #include <string>
+#include "fenwick_tree.h"
 using namespace std;
 
 /*
@@ -17,29 +17,28 @@ using namespace std;
     ./test_fenwick_tree
 */
 
+// Wrapper class to provide 1-based indexing interface for tests
+// while using the 0-based BIT class from fenwick_tree.h
 class FenwickTree 
 {
-    vector<int> bit; // 1-based
-    int n;
+    BIT<int> bit;
     
 public:
-    explicit FenwickTree(int n) : bit(n + 1, 0), n(n + 1) {}
+    explicit FenwickTree(int n) : bit(n) {}
 
     void update(int i, int delta) 
     {
-        for(; i < n; i += (i & -i)) bit[i] += delta;
+        bit.add(i - 1, delta); // Convert 1-based to 0-based
     }
     
     int query(int i) const 
     {
-        int sum = 0;
-        for(; i > 0; i -= (i & -i)) sum += bit[i];
-        return sum;
+        return bit.pref_sum(i - 1); // Convert 1-based to 0-based
     }
     
     int rangeQuery(int l, int r) const 
     {
-        return query(r) - query(l - 1);
+        return bit.range_sum(l - 1, r - 1); // Convert 1-based to 0-based
     }
 };
 
