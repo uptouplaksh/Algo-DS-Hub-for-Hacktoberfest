@@ -16,12 +16,13 @@ Space Complexity: O(1)
 
 from typing import List
 
+
 class Solution:
     """
     A class to represent the Boyer-Moore Voting Algorithm implementation.
     """
 
-    def majorityElement(self, nums: List[int]) -> int:
+    def majority_element(self, nums: List[int]) -> int:
         """
         Finds the majority element in the list using the Boyer-Moore Voting Algorithm.
 
@@ -61,21 +62,14 @@ if __name__ == "__main__":
     # Example 1: Has a majority element
     nums1 = [3, 2, 3]
     print("Input:", nums1)
-    print("Majority Element:", solver.majorityElement(nums1))  # Expected Output: 3
+    print("Majority Element:", solver.majority_element(nums1))  # Expected Output: 3
 
     # Example 2: Has a majority element
     nums2 = [2, 2, 1, 1, 1, 2, 2]
     print("\nInput:", nums2)
-    print("Majority Element:", solver.majorityElement(nums2))  # Expected Output: 2
+    print("Majority Element:", solver.majority_element(nums2))  # Expected Output: 2
 
     # Example 3: No majority element (edge case)
     nums3 = [1, 2, 3, 4]
     print("\nInput:", nums3)
-    print("Majority Element:", solver.majorityElement(nums3))  # Expected Output: None
-
-    print("Input array:", nums)
-    majority = find_majority_element(nums)
-    if majority is not None:
-        print("Majority Element:", majority)
-    else:
-        print("No majority element found.")
+    print("Majority Element:", solver.majority_element(nums3))  # Expected Output: None
