@@ -1,49 +1,51 @@
 """
-Longest Increasing Subsequence (LIS) - O(n log n) implementation
-
+Longest Increasing Subsequence (LIS)
 Description:
-    Finds the length of the Longest Increasing Subsequence (LIS)
-    in a given list of integers.
+Finds the length and actual longest increasing subsequence of a list of integers.
 
-    Supports two modes:
-    1. User input (interactive)
-    2. Test mode (predefined examples)
+Time Complexity: O(n log n)
+Space Complexity: O(n)
 """
 
 from bisect import bisect_left
-from typing import List, Tuple
 
 
-def longest_increasing_subsequence(nums: List[int]) -> Tuple[int, List[int]]:
+def longest_increasing_subsequence(nums: list) -> tuple:
     """
     Returns the length and the actual longest strictly increasing subsequence.
 
-    Time Complexity: O(n log n)
-    Space Complexity: O(n)
+    Args:
+        nums: List of integers to analyze.
+
+    Returns:
+        A tuple of two elements:
+        - int: length of the longest increasing subsequence
+        - list: the actual longest increasing subsequence
     """
     if not nums:
         return 0, []
 
-    sub = []  # smallest tail for increasing subsequences of each length
-    sub_indices = []  # stores indices in original array
-    parent = [-1] * len(nums)  # to reconstruct LIS
+    sub = []  # smallest tail for subsequences of each length
+    parent = [None] * len(nums)  # for reconstructing the LIS
+    sub_idx = []  # indices of the current smallest tails
 
     for i, x in enumerate(nums):
-        idx = bisect_left(sub, x)
-        if idx == len(sub):
+        pos = bisect_left(sub, x)
+        if pos == len(sub):
             sub.append(x)
-            sub_indices.append(i)
+            sub_idx.append(i)
         else:
-            sub[idx] = x
-            sub_indices[idx] = i
+            sub[pos] = x
+            sub_idx[pos] = i
 
-        if idx != 0:
-            parent[i] = sub_indices[idx - 1]
+        # track predecessors
+        if pos != 0:
+            parent[i] = sub_idx[pos - 1]
 
     # Reconstruct LIS
     lis = []
-    k = sub_indices[-1]
-    while k != -1:
+    k = sub_idx[-1] if sub_idx else None
+    while k is not None:
         lis.append(nums[k])
         k = parent[k]
     lis.reverse()
@@ -51,37 +53,22 @@ def longest_increasing_subsequence(nums: List[int]) -> Tuple[int, List[int]]:
     return len(sub), lis
 
 
-def run_tests() -> None:
-    """Run a few sample test cases."""
-    print("\nRunning sample test cases...\n")
-
+def run_tests():
+    """Run sample test cases for LIS."""
     test_cases = [
-        ([10, 9, 2, 5, 3, 7, 101, 18], 4),
-        ([0, 1, 0, 3, 2, 3], 4),
-        ([7, 7, 7, 7, 7], 1),
-        ([1, 2, 3, 4, 5], 5),
-        ([5, 4, 3, 2, 1], 1),
+        ([10, 9, 2, 5, 3, 7, 101, 18], (4, [2, 3, 7, 101])),
+        ([0, 1, 0, 3, 2, 3], (4, [0, 1, 2, 3])),
+        ([7, 7, 7, 7, 7], (1, [7])),
+        ([1, 2, 3, 4, 5], (5, [1, 2, 3, 4, 5])),
+        ([5, 4, 3, 2, 1], (1, [5])),
     ]
 
-    for arr, expected_len in test_cases:
-        result_len, result_seq = longest_increasing_subsequence(arr)
-        print(
-            f"Input: {arr}\nExpected length: {expected_len}, "
-            f"Got length: {result_len}, LIS: {result_seq}\n"
-        )
-
-
-def user_input_mode() -> None:
-    """Interactive mode to read numbers from the user."""
-    print("\nEnter number of elements in the sequence:")
-    n = int(input().strip())
-
-    print(f"Enter {n} integers separated by space:")
-    arr = list(map(int, input().strip().split()))
-
-    length, sequence = longest_increasing_subsequence(arr)
-    print(f"\nLength of Longest Increasing Subsequence: {length}")
-    print(f"Longest Increasing Subsequence: {sequence}")
+    print("\nRunning sample test cases...\n")
+    for arr, expected in test_cases:
+        length, subseq = longest_increasing_subsequence(arr)
+        print(f"Input: {arr}")
+        print(f"Expected Length: {expected[0]}, Got: {length}")
+        print(f"Expected LIS: {expected[1]}, Got: {subseq}\n")
 
 
 if __name__ == "__main__":
@@ -91,7 +78,12 @@ if __name__ == "__main__":
     choice = input("Enter 1 or 2: ").strip()
 
     if choice == "1":
-        user_input_mode()
+        n = int(input("\nEnter number of elements: ").strip())
+        arr = list(map(int, input(f"Enter {n} integers separated by space:\n").split()))
+        length, subseq = longest_increasing_subsequence(arr)
+        print(f"\nLength of Longest Increasing Subsequence: {length}")
+        print(f"Longest Increasing Subsequence: {subseq}")
+
     elif choice == "2":
         run_tests()
     else:
