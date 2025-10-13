@@ -1,11 +1,18 @@
-package Open-Source-DS-Algo.data_structures.heap.java;
-
 import java.util.ArrayList;
 
 /**
- * MaxHeap Implementation in Java
+ * Max-Heap Implementation in Java
+ *
+ * Description:
  * A Max Heap is a complete binary tree where the value of each node
  * is greater than or equal to the values of its children.
+ *
+ * Time Complexity:
+ * - insert(): O(log n)
+ * - extractMax(): O(log n)
+ * - getMax(): O(1)
+ *
+ * Space Complexity: O(n)
  */
 public class MaxHeap {
 
@@ -19,7 +26,6 @@ public class MaxHeap {
 
     /**
      * Inserts a new element into the heap.
-     * Time Complexity: O(log n)
      */
     public void insert(int value) {
         heap.add(value);                // Add new value at end
@@ -28,7 +34,6 @@ public class MaxHeap {
 
     /**
      * Returns the maximum element (root) without removing it.
-     * Time Complexity: O(1)
      */
     public int getMax() {
         if (heap.isEmpty()) {
@@ -39,7 +44,6 @@ public class MaxHeap {
 
     /**
      * Removes and returns the maximum element from the heap.
-     * Time Complexity: O(log n)
      */
     public int extractMax() {
         if (heap.isEmpty()) {
@@ -104,11 +108,3 @@ public class MaxHeap {
         System.out.println("New Max: " + heap.getMax());         // 25
     }
 }
-
-/*
- * Complexity Summary:
- * insert()     → O(log n)
- * extractMax() → O(log n)
- * getMax()     → O(1)
- * Space        → O(n)
- */
