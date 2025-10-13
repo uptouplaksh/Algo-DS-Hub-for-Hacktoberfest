@@ -12,6 +12,8 @@ O(1) time complexity for append and pop operations from both ends.
     - remove_rear(): O(1)
     - is_empty(): O(1)
     - size(): O(1)
+    - peek_front(): O(1)
+    - peek_rear(): O(1)
 
 💾 Space Complexity:
     - O(n), where n is the number of elements in the deque.
@@ -25,7 +27,7 @@ class Deque:
 
     def __init__(self):
         """Initialize an empty deque using collections.deque."""
-        self.items = deque()
+        self._items = deque()
 
     def is_empty(self):
         """Check if the deque is empty.
@@ -33,7 +35,7 @@ class Deque:
         Returns:
             bool: True if empty, False otherwise.
         """
-        return len(self.items) == 0
+        return len(self._items) == 0
 
     def add_front(self, item):
         """Add an item to the front of the deque.
@@ -41,7 +43,7 @@ class Deque:
         Args:
             item: Element to be added to the front.
         """
-        self.items.appendleft(item)
+        self._items.appendleft(item)
 
     def add_rear(self, item):
         """Add an item to the rear (end) of the deque.
@@ -49,7 +51,7 @@ class Deque:
         Args:
             item: Element to be added to the rear.
         """
-        self.items.append(item)
+        self._items.append(item)
 
     def remove_front(self):
         """Remove and return an item from the front of the deque.
@@ -62,7 +64,7 @@ class Deque:
         """
         if self.is_empty():
             raise IndexError("Deque is empty. Cannot remove from front.")
-        return self.items.popleft()
+        return self._items.popleft()
 
     def remove_rear(self):
         """Remove and return an item from the rear of the deque.
@@ -75,7 +77,7 @@ class Deque:
         """
         if self.is_empty():
             raise IndexError("Deque is empty. Cannot remove from rear.")
-        return self.items.pop()
+        return self._items.pop()
 
     def size(self):
         """Return the number of elements in the deque.
@@ -83,7 +85,33 @@ class Deque:
         Returns:
             int: The number of items in the deque.
         """
-        return len(self.items)
+        return len(self._items)
+    
+    def peek_front(self):
+        """Return the item at the front without removing it.
+        
+        Returns:
+            The item at the front of the deque
+        
+        Raises:
+            IndexError: If the deque is empty
+        """
+        if self.is_empty():
+            raise IndexError("peek_front from empty deque")
+        return self._items[0] 
+    
+    def peek_rear(self):
+        """Return the item at the rear without removing it.
+        
+        Returns:
+            The item at the rear of the deque
+        
+        Raises:
+            IndexError: If the deque is empty
+        """
+        if self.is_empty():
+            raise IndexError("peek_rear from empty deque")
+        return self._items[-1]
 
 
 if __name__ == "__main__":
@@ -96,21 +124,23 @@ if __name__ == "__main__":
     dq.add_rear(10)
     dq.add_rear(20)
     dq.add_rear(30)
-    print("Current Deque:", list(dq.items))
+    print("Current Deque:", list(dq._items))
 
     print("\nAdding element to front: 5")
     dq.add_front(5)
-    print("Current Deque:", list(dq.items))
+    print("Current Deque:", list(dq._items))
 
     print("\nRemoving element from rear:", dq.remove_rear())
-    print("Current Deque:", list(dq.items))
+    print("Current Deque:", list(dq._items))
 
     print("\nRemoving element from front:", dq.remove_front())
-    print("Current Deque:", list(dq.items))
+    print("Current Deque:", list(dq._items))
 
     print("\nIs deque empty?", dq.is_empty())
     print("Size of deque:", dq.size())
 
+    print("\nPeek First Element:", dq.peek_front())
+    print("Peek Last Element:", dq.peek_rear())
 
 """
 Example Output:
@@ -130,5 +160,8 @@ Current Deque: [10, 20]
 
 Is deque empty? False
 Size of deque: 2
+
+Peek First Element: 10
+Peek Last Element: 20
 
 """
