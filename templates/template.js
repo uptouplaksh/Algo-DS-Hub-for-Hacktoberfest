@@ -3,12 +3,15 @@
  *
  * Description:
  * This is a template file for JavaScript solutions.
+ *
+ * Time Complexity: O(...)
+ * Space Complexity: O(...)
  */
-
 function placeholderFunction() {
-    // Placeholder function
-    console.log("This is a placeholder function.");
+console.log("This is a placeholder function.");
 }
 
+if (require.main === module) {
 // Example usage
 placeholderFunction();
+}
