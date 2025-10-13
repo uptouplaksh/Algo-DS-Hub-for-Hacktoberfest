@@ -73,6 +73,11 @@ void countingSort(vector<int>& arr, int exp) {
 
 // Main Radix Sort function
 void radixSort(vector<int>& arr) {
+    // If array is empty, no need to sort
+    if (arr.empty()) {
+        return;
+    }
+
     // Find the maximum number to know the number of digits
     int m = getMax(arr);
 
@@ -80,24 +85,4 @@ void radixSort(vector<int>& arr) {
     // exp is 10^i where i is the current digit number
     for (int exp = 1; m / exp > 0; exp *= 10)
         countingSort(arr, exp);
-}
-
-
-// Driver code to test Radix Sort
-int main() {
-    vector<int> arr = {170, 45, 75, 90, 802, 24, 2, 66};
-
-    cout << "Original array:\n";
-    for (int num : arr)
-        cout << num << " ";
-    cout << endl;
-
-    radixSort(arr);
-
-    cout << "\nSorted array:\n";
-    for (int num : arr)
-        cout << num << " ";
-    cout << endl;
-
-    return 0;
 }
