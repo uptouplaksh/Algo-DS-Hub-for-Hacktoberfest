@@ -52,7 +52,13 @@ jobs:
                 labelsToAdd.add('javascript');
               }
               
-              if (filename.includes('/java/') || filename.endsWith('.java')) {
+
+              //Java files
+              else if (
+                filename.includes('/java/') ||
+                filename.includes('\\java\\') ||
+                filename.endsWith('.java')
+              ) {
                 labelsToAdd.add('java');
               }
               

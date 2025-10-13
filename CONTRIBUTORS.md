@@ -58,6 +58,13 @@ Thanks to all these amazing people for contributing to this project 💖
                 </a>
             </td>
             <td align="center">
+                <a href="https://github.com/akaneme">
+                    <img src="https://avatars.githubusercontent.com/u/182057372?v=4" width="100;" alt="akaneme"/>
+                    <br />
+                    <sub><b>akanksha n.</b></sub>
+                </a>
+            </td>
+            <td align="center">
                 <a href="https://github.com/KartikeyaNainkhwal">
                     <img src="https://avatars.githubusercontent.com/u/157278252?v=4" width="100;" alt="KartikeyaNainkhwal"/>
                     <br />
@@ -85,22 +92,8 @@ Thanks to all these amazing people for contributing to this project 💖
                     <sub><b>Kritarth </b></sub>
                 </a>
             </td>
-            <td align="center">
-                <a href="https://github.com/amit-123-max">
-                    <img src="https://avatars.githubusercontent.com/u/183510277?v=4" width="100;" alt="amit-123-max"/>
-                    <br />
-                    <sub><b>amit-123-max</b></sub>
-                </a>
-            </td>
 		</tr>
 		<tr>
-            <td align="center">
-                <a href="https://github.com/sonata22">
-                    <img src="https://avatars.githubusercontent.com/u/112934863?v=4" width="100;" alt="sonata22"/>
-                    <br />
-                    <sub><b>Nataliia Sosnovshchenko</b></sub>
-                </a>
-            </td>
             <td align="center">
                 <a href="https://github.com/SajalGarg035">
                     <img src="https://avatars.githubusercontent.com/u/164674816?v=4" width="100;" alt="SajalGarg035"/>
@@ -109,10 +102,24 @@ Thanks to all these amazing people for contributing to this project 💖
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/Jivi-this-side">
-                    <img src="https://avatars.githubusercontent.com/u/156334435?v=4" width="100;" alt="Jivi-this-side"/>
+                <a href="https://github.com/vannu07">
+                    <img src="https://avatars.githubusercontent.com/u/161148074?v=4" width="100;" alt="vannu07"/>
                     <br />
-                    <sub><b>Dithi</b></sub>
+                    <sub><b>VARNIT KUMAR</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/sonata22">
+                    <img src="https://avatars.githubusercontent.com/u/112934863?v=4" width="100;" alt="sonata22"/>
+                    <br />
+                    <sub><b>Nataliia Sosnovshchenko</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/amit-123-max">
+                    <img src="https://avatars.githubusercontent.com/u/183510277?v=4" width="100;" alt="amit-123-max"/>
+                    <br />
+                    <sub><b>amit-123-max</b></sub>
                 </a>
             </td>
             <td align="center">
@@ -123,10 +130,19 @@ Thanks to all these amazing people for contributing to this project 💖
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/akaneme">
-                    <img src="https://avatars.githubusercontent.com/u/182057372?v=4" width="100;" alt="akaneme"/>
+                <a href="https://github.com/Jivi-this-side">
+                    <img src="https://avatars.githubusercontent.com/u/156334435?v=4" width="100;" alt="Jivi-this-side"/>
                     <br />
-                    <sub><b>akanksha n.</b></sub>
+                    <sub><b>Dithi</b></sub>
+                </a>
+            </td>
+		</tr>
+		<tr>
+            <td align="center">
+                <a href="https://github.com/Lagmator22">
+                    <img src="https://avatars.githubusercontent.com/u/133108827?v=4" width="100;" alt="Lagmator22"/>
+                    <br />
+                    <sub><b>Lagmator22</b></sub>
                 </a>
             </td>
             <td align="center">
@@ -136,13 +152,18 @@ Thanks to all these amazing people for contributing to this project 💖
                     <sub><b>Mennatallah Ashraf</b></sub>
                 </a>
             </td>
-		</tr>
-		<tr>
             <td align="center">
                 <a href="https://github.com/SnehalBawanthade">
                     <img src="https://avatars.githubusercontent.com/u/143216535?v=4" width="100;" alt="SnehalBawanthade"/>
                     <br />
                     <sub><b>Snehal Bawanthade</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/JashSanka">
+                    <img src="https://avatars.githubusercontent.com/u/211646070?v=4" width="100;" alt="JashSanka"/>
+                    <br />
+                    <sub><b>Jash Sanka</b></sub>
                 </a>
             </td>
             <td align="center">
@@ -153,19 +174,14 @@ Thanks to all these amazing people for contributing to this project 💖
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/Lagmator22">
-                    <img src="https://avatars.githubusercontent.com/u/133108827?v=4" width="100;" alt="Lagmator22"/>
-                    <br />
-                    <sub><b>Lagmator22</b></sub>
-                </a>
-            </td>
-            <td align="center">
                 <a href="https://github.com/twaite11">
                     <img src="https://avatars.githubusercontent.com/u/224871895?v=4" width="100;" alt="twaite11"/>
                     <br />
                     <sub><b>Tyler Waite</b></sub>
                 </a>
             </td>
+		</tr>
+		<tr>
             <td align="center">
                 <a href="https://github.com/mohit-22">
                     <img src="https://avatars.githubusercontent.com/u/183510328?v=4" width="100;" alt="mohit-22"/>
@@ -180,27 +196,11 @@ Thanks to all these amazing people for contributing to this project 💖
                     <sub><b>Asit Wasnik</b></sub>
                 </a>
             </td>
-		</tr>
-		<tr>
             <td align="center">
-                <a href="https://github.com/AMIT20-P">
-                    <img src="https://avatars.githubusercontent.com/u/216828285?v=4" width="100;" alt="AMIT20-P"/>
+                <a href="https://github.com/Ruturaj-007">
+                    <img src="https://avatars.githubusercontent.com/u/157049145?v=4" width="100;" alt="Ruturaj-007"/>
                     <br />
-                    <sub><b>Amit</b></sub>
-                </a>
-            </td>
-            <td align="center">
-                <a href="https://github.com/Frynnn-69">
-                    <img src="https://avatars.githubusercontent.com/u/184061481?v=4" width="100;" alt="Frynnn-69"/>
-                    <br />
-                    <sub><b>Firyan</b></sub>
-                </a>
-            </td>
-            <td align="center">
-                <a href="https://github.com/JAINAM576">
-                    <img src="https://avatars.githubusercontent.com/u/85880788?v=4" width="100;" alt="JAINAM576"/>
-                    <br />
-                    <sub><b>Jainam</b></sub>
+                    <sub><b>Ruturaj Pawar</b></sub>
                 </a>
             </td>
             <td align="center">
@@ -211,26 +211,47 @@ Thanks to all these amazing people for contributing to this project 💖
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/vannu07">
-                    <img src="https://avatars.githubusercontent.com/u/161148074?v=4" width="100;" alt="vannu07"/>
+                <a href="https://github.com/jesusplasencia">
+                    <img src="https://avatars.githubusercontent.com/u/189365237?v=4" width="100;" alt="jesusplasencia"/>
                     <br />
-                    <sub><b>VARNIT KUMAR</b></sub>
+                    <sub><b>Jesus Plasencia</b></sub>
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/Ruturaj-007">
-                    <img src="https://avatars.githubusercontent.com/u/157049145?v=4" width="100;" alt="Ruturaj-007"/>
+                <a href="https://github.com/JAINAM576">
+                    <img src="https://avatars.githubusercontent.com/u/85880788?v=4" width="100;" alt="JAINAM576"/>
                     <br />
-                    <sub><b>Ruturaj Pawar</b></sub>
+                    <sub><b>Jainam</b></sub>
                 </a>
             </td>
 		</tr>
 		<tr>
             <td align="center">
+                <a href="https://github.com/Frynnn-69">
+                    <img src="https://avatars.githubusercontent.com/u/184061481?v=4" width="100;" alt="Frynnn-69"/>
+                    <br />
+                    <sub><b>Firyan</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/AMIT20-P">
+                    <img src="https://avatars.githubusercontent.com/u/216828285?v=4" width="100;" alt="AMIT20-P"/>
+                    <br />
+                    <sub><b>Amit</b></sub>
+                </a>
+            </td>
+            <td align="center">
                 <a href="https://github.com/mukkss">
                     <img src="https://avatars.githubusercontent.com/u/149927808?v=4" width="100;" alt="mukkss"/>
                     <br />
                     <sub><b>Mukesh</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/kyangOrange">
+                    <img src="https://avatars.githubusercontent.com/u/168249130?v=4" width="100;" alt="kyangOrange"/>
+                    <br />
+                    <sub><b>kyangOrange</b></sub>
                 </a>
             </td>
             <td align="center">
@@ -247,11 +268,20 @@ Thanks to all these amazing people for contributing to this project 💖
                     <sub><b>alicenjr</b></sub>
                 </a>
             </td>
+		</tr>
+		<tr>
             <td align="center">
                 <a href="https://github.com/ak4shravikumar">
                     <img src="https://avatars.githubusercontent.com/u/189372043?v=4" width="100;" alt="ak4shravikumar"/>
                     <br />
                     <sub><b>ak4shravikumar</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/Vidushi2709">
+                    <img src="https://avatars.githubusercontent.com/u/159937181?v=4" width="100;" alt="Vidushi2709"/>
+                    <br />
+                    <sub><b>Vin</b></sub>
                 </a>
             </td>
             <td align="center">
@@ -268,8 +298,6 @@ Thanks to all these amazing people for contributing to this project 💖
                     <sub><b>Shubham15986</b></sub>
                 </a>
             </td>
-		</tr>
-		<tr>
             <td align="center">
                 <a href="https://github.com/preeti712">
                     <img src="https://avatars.githubusercontent.com/u/141026984?v=4" width="100;" alt="preeti712"/>
@@ -284,6 +312,8 @@ Thanks to all these amazing people for contributing to this project 💖
                     <sub><b>Nilaksh Dureja</b></sub>
                 </a>
             </td>
+		</tr>
+		<tr>
             <td align="center">
                 <a href="https://github.com/michalszkil">
                     <img src="https://avatars.githubusercontent.com/u/49024368?v=4" width="100;" alt="michalszkil"/>
@@ -312,8 +342,6 @@ Thanks to all these amazing people for contributing to this project 💖
                     <sub><b>nihaal_n_o</b></sub>
                 </a>
             </td>
-		</tr>
-		<tr>
             <td align="center">
                 <a href="https://github.com/DevendraMane">
                     <img src="https://avatars.githubusercontent.com/u/140258830?v=4" width="100;" alt="DevendraMane"/>
@@ -328,6 +356,8 @@ Thanks to all these amazing people for contributing to this project 💖
                     <sub><b>DEEPIKA P.</b></sub>
                 </a>
             </td>
+		</tr>
+		<tr>
             <td align="center">
                 <a href="https://github.com/BhavithaMarikeeri">
                     <img src="https://avatars.githubusercontent.com/u/186051128?v=4" width="100;" alt="BhavithaMarikeeri"/>
