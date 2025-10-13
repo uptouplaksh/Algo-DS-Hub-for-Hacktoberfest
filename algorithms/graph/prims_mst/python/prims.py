@@ -11,8 +11,6 @@ Time Complexity:
 
 Space Complexity:
     O(V + E) — for storing adjacency list and visited nodes.
-
-Author: Aman Vaibhav
 """
 
 import heapq
