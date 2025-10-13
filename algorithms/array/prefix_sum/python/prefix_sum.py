@@ -1,4 +1,10 @@
-"""Prefix Sum Array Implementation"""
+"""
+Prefix Sum Array Implementation
+
+Time Complexity: O(n) for building, O(1) for queries
+Space Complexity: O(n)
+
+"""
 
 
 def build_prefix_sum(arr):
