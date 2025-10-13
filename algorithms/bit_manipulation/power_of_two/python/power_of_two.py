@@ -1,38 +1,35 @@
 """
 Module: power_of_two
-Description: Check if a given integer is a power of two using bit manipulation.
+Description:
+    This module provides a function to check if a given integer is a power of two
+    using efficient bit manipulation. A number n is a power of two if it has
+    exactly one bit set in its binary representation.
 
-An integer n is a power of two if and only if it has exactly one bit set in its binary representation.
-For example:
-- 1 (0b0001) → True
-- 2 (0b0010) → True
-- 3 (0b0011) → False
-- 16 (0b10000) → True
+Bit Manipulation Logic:
+    For any positive integer n:
+        n & (n - 1) == 0  → True if n is a power of two
+    Example:
+        8 (0b1000)
+        7 (0b0111)
+        8 & 7 = 0  → True
+
+Complexity Analysis:
+    Time Complexity: O(1)
+    Space Complexity: O(1)
 """
 
 def is_power_of_two(n: int) -> bool:
     """
-    Check whether a given integer n is a power of two using bit manipulation.
-
-    Approach:
-    - A positive integer n is a power of two if n & (n - 1) == 0.
-      This works because powers of two have only one set bit in binary.
-
-    Example:
-        n = 8 (1000)
-        n - 1 = 7 (0111)
-        n & (n - 1) = 0 → True
+    Check whether a given integer n is a power of two.
 
     Args:
         n (int): The integer to check.
 
     Returns:
         bool: True if n is a power of two, False otherwise.
-
-    Time Complexity: O(1)
-    Space Complexity: O(1)
     """
     return n > 0 and (n & (n - 1)) == 0
+
 
 # Example usage
 if __name__ == "__main__":
