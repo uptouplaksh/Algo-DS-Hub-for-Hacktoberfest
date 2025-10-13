@@ -387,6 +387,15 @@ Thanks to all these amazing people for contributing to this project 💖
                 </a>
             </td>
 		</tr>
+		<tr>
+            <td align="center">
+                <a href="https://github.com/psy_duck1">
+                    <img src="https://avatars.githubusercontent.com/u/112345678?v=4" width="100;" alt="psy_duck1"/>
+                    <br />
+                    <sub><b>Aaditya Agarwal</b></sub>
+                </a>
+            </td>
+		</tr>
 	<tbody>
 </table>
 <!-- readme: contributors -end -->

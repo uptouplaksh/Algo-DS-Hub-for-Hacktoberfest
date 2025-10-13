@@ -35,6 +35,19 @@ Pull requests submitted for issues that were not claimed or were assigned to som
     * Create your file (e.g., `binary_search.py`).
     * Write your code. **Remember to add comments explaining the logic and the Time & Space Complexity.**
 
+    ### Using Templates
+
+    We provide boilerplate template files for each language in the `templates/` folder. 
+    Contributors are encouraged to use these templates as a starting point to ensure their code is properly formatted and includes docstrings/comments.
+
+    Available templates:
+
+    - Python: `templates/template.py`
+    - Java: `templates/template.java`
+    - JavaScript: `templates/template.js`
+    - C++: `templates/template.cpp`
+
+
 6.  **Commit Your Changes:** Make a clear and descriptive commit message.
     ```bash
     git add.
