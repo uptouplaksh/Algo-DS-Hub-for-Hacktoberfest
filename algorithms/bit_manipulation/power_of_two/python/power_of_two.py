@@ -34,7 +34,6 @@ def is_power_of_two(n: int) -> bool:
     """
     return n > 0 and (n & (n - 1)) == 0
 
-
 # Example usage
 if __name__ == "__main__":
     test_numbers = [0, 1, 2, 3, 4, 8, 16, 18, 32]
