@@ -25,7 +25,8 @@ def prims_mst(graph, start=0):
 
     Parameters:
         graph (dict): Adjacency list representation of the graph.
-                      Example: {0: [(1, 2), (3, 6)], 1: [(0, 2), (2, 3), (3, 8)], ...}
+                      Example: {0: [(1, 2), (3, 6)], 
+                              1: [(0, 2), (2, 3), (3, 8)], ...}
         start (int): Starting vertex (default = 0)
 
     Returns:
