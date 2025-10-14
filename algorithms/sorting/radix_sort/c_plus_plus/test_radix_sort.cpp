@@ -3,8 +3,7 @@
 #include <cassert>
 #include <algorithm>
 
-// Including the implementation file directly because it has no header
-#include "radix_sort.cpp"
+#include "radix_sort.h"
 
 // Test function to print and verify the sorted array
 void run_test(std::vector<int>& test_case, const std::vector<int>& expected) {
