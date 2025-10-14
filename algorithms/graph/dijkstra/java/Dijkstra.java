@@ -11,7 +11,7 @@ import java.util.PriorityQueue;
  * Time Complexity: O((V + E) log V) where V is the number of vertices and E is the number of edges.
  * Space Complexity: O(V + E) for the adjacency list, distance array, and priority queue.
  */
-public class dijkstra {
+public class Dijkstra {
 
     static class Pair implements Comparable<Pair> {
         int vertex;
