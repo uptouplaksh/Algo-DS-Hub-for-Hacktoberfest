@@ -1,69 +1,75 @@
 """
 Module: validate_bst
 --------------------
-This module provides a function to validate whether a given binary tree
-is a valid Binary Search Tree (BST) using a recursive approach with
-min/max constraints.
+This module provides a function to determine if a given binary tree is a valid
+Binary Search Tree (BST).
 
-A BST satisfies the property that for every node:
-- All values in the left subtree are smaller than the node's value.
-- All values in the right subtree are greater than the node's value.
+A Binary Search Tree (BST) is a binary tree in which for every node:
+- The value of all nodes in the left subtree is less than the node’s value.
+- The value of all nodes in the right subtree is greater than the node’s value.
+
+Algorithm:
+----------
+This implementation uses a recursive approach that passes down minimum and
+maximum constraints for each node. If a node violates the constraint, the
+tree is not a valid BST.
+
+Complexity Analysis:
+--------------------
+Time Complexity: O(n), where n is the number of nodes in the tree.
+Each node is visited once.
+Space Complexity: O(h), where h is the height of the tree.
+The space is used by the recursion stack.
 """
-
-from __future__ import annotations
-from typing import Optional
 
 
 class TreeNode:
-    """
-    Definition of a binary tree node.
+    """Class representing a node in a binary tree."""
 
-    Attributes:
-        val (int): The value of the node.
-        left (Optional[TreeNode]): Pointer to the left child.
-        right (Optional[TreeNode]): Pointer to the right child.
-    """
-
-    def __init__(self, val: int, left: Optional[TreeNode] = None, right: Optional[TreeNode] = None) -> None:
+    def __init__(self, val):
         self.val = val
-        self.left = left
-        self.right = right
+        self.left = None
+        self.right = None
 
 
-def is_valid_bst(root: Optional[TreeNode], min_val: float = float("-inf"), max_val: float = float("inf")) -> bool:
+def is_valid_bst(node, min_val=float('-inf'), max_val=float('inf')):
     """
-    Recursively checks if a binary tree is a valid BST.
+    Recursively checks if the binary tree rooted at `node` is a valid BST.
 
     Args:
-        root (Optional[TreeNode]): The root node of the binary tree.
-        min_val (float): The minimum allowed value for the current node.
-        max_val (float): The maximum allowed value for the current node.
+        node (TreeNode): Current node being validated.
+        min_val (float): Minimum allowed value for this subtree.
+        max_val (float): Maximum allowed value for this subtree.
 
     Returns:
-        bool: True if the tree is a valid BST, False otherwise.
-
-    Time Complexity:
-        O(n) — each node is visited once.
-    Space Complexity:
-        O(h) — recursion stack, where h is the height of the tree.
+        bool: True if the subtree is a valid BST, otherwise False.
     """
-    if root is None:
+    if node is None:
         return True
 
-    if not (min_val < root.val < max_val):
+    if not (min_val < node.val < max_val):
         return False
 
-    return is_valid_bst(root.left, min_val, root.val) and is_valid_bst(root.right, root.val, max_val)
-
+    return (
+        is_valid_bst(node.left, min_val, node.val)
+        and is_valid_bst(node.right, node.val, max_val)
+    )
 
 
 if __name__ == "__main__":
-    # Example usage
-    root = TreeNode(5)
-    root.left = TreeNode(3)
-    root.right = TreeNode(7)
-    root.left.left = TreeNode(2)
-    root.left.right = TreeNode(4)
-    root.right.right = TreeNode(8)
+    # Example 1: Valid BST
+    root_valid = TreeNode(10)
+    root_valid.left = TreeNode(5)
+    root_valid.right = TreeNode(15)
+    root_valid.left.left = TreeNode(2)
+    root_valid.left.right = TreeNode(7)
 
-    print("Is the given tree a valid BST?", is_valid_bst(root))
+    print("Valid BST check (should be True):", is_valid_bst(root_valid))
+
+    # Example 2: Invalid BST
+    root_invalid = TreeNode(10)
+    root_invalid.left = TreeNode(5)
+    root_invalid.right = TreeNode(8)  # Invalid: right child < root
+
+    print("Invalid BST check (should be False):", is_valid_bst(root_invalid))
+
