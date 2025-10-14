@@ -53,10 +53,7 @@ def is_valid_bst(root: Optional[TreeNode], min_val: float = float("-inf"), max_v
     if not (min_val < root.val < max_val):
         return False
 
-    return (
-        is_valid_bst(root.left, min_val, root.val)
-        and is_valid_bst(root.right, root.val, max_val)
-    )
+    return is_valid_bst(root.left, min_val, root.val) and is_valid_bst(root.right, root.val, max_val)
 
 
 if __name__ == "__main__":
