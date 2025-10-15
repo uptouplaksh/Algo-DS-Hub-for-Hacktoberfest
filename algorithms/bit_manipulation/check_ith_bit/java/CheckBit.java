@@ -1,12 +1,16 @@
-/*
- * File: check_bit.java
- * Description: Program to check if the i-th bit of a number is set
- * using bitwise operators.
+/**
+ * Check i-th Bit
+ *
+ * Description:
+ * Checks if the i-th bit of a number is set using bitwise operators.
+ *
+ * Time Complexity: O(1)
+ * Space Complexity: O(1)
  */
 
 import java.util.Scanner;
 
-public class check_bit {
+public class CheckBit {
     
     /**
      * Checks if the i-th bit of number n is set.
