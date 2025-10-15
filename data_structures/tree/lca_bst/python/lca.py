@@ -1,8 +1,11 @@
 """
-Lowest Common Ancestor (LCA) in a Binary Search Tree
+Lowest Common Ancestor in Binary Search Tree
 
-The LCA of two nodes p and q is the lowest node that has both p and q as 
-descendants (a node can be a descendant of itself).
+Description:
+Finds the lowest common ancestor of two nodes in a BST using recursive traversal.
+
+Time Complexity: O(h) where h is the height of the tree
+Space Complexity: O(h) for the recursion stack
 """
 
 
@@ -17,21 +20,15 @@ class TreeNode:
 
 def lca_bst(root, p, q):
     """
-    Find LCA of two nodes in BST using recursion.
-    
-    Leverages BST property: if both nodes are less than root, LCA is in left 
-    subtree; if both are greater, LCA is in right subtree; otherwise root is LCA.
-    
-    Time Complexity: O(h) where h is tree height
-    Space Complexity: O(h) for recursion stack
+    Finds the lowest common ancestor of two nodes in a BST.
     
     Args:
-        root: Root node of the BST
-        p: First node (TreeNode or int value)
-        q: Second node (TreeNode or int value)
+        root: Root node of the BST (TreeNode)
+        p: First node value or TreeNode
+        q: Second node value or TreeNode
     
     Returns:
-        TreeNode: The LCA node
+        TreeNode: The lowest common ancestor node
     """
     p_val = p.val if isinstance(p, TreeNode) else p
     q_val = q.val if isinstance(q, TreeNode) else q
@@ -39,24 +36,25 @@ def lca_bst(root, p, q):
     if root is None:
         return None
     
+    # Both nodes are in left subtree
     if p_val < root.val and q_val < root.val:
         return lca_bst(root.left, p_val, q_val)
+    
+    # Both nodes are in right subtree
     elif p_val > root.val and q_val > root.val:
         return lca_bst(root.right, p_val, q_val)
+    
+    # Split point found - this is the LCA
     else:
         return root
 
 
 def build_sample_bst():
     """
-    Build sample BST:
-            6
-          /   \
-         2     8
-        / \   / \
-       0   4 7   9
-          / \
-         3   5
+    Builds a sample BST for testing.
+    
+    Returns:
+        TreeNode: Root of the sample BST
     """
     root = TreeNode(6)
     root.left = TreeNode(2)
@@ -70,17 +68,11 @@ def build_sample_bst():
     return root
 
 
-# ============================================================================
-# RUNNABLE EXAMPLE
-# ============================================================================
-
 if __name__ == "__main__":
-    print("=" * 60)
-    print("Lowest Common Ancestor in Binary Search Tree")
-    print("=" * 60)
-    
+    # Build sample BST
     root = build_sample_bst()
-    print("\nSample BST Structure:")
+    
+    print("Sample BST Structure:")
     print("        6")
     print("      /   \\")
     print("     2     8")
@@ -90,26 +82,17 @@ if __name__ == "__main__":
     print("     3   5")
     print()
     
+    # Test cases
     test_cases = [
         (2, 8, "LCA of 2 and 8"),
         (2, 4, "LCA of 2 and 4"),
         (3, 5, "LCA of 3 and 5"),
         (0, 5, "LCA of 0 and 5"),
         (7, 9, "LCA of 7 and 9"),
-        (2, 2, "LCA of 2 and 2 (node with itself)"),
+        (2, 2, "LCA of 2 and 2"),
     ]
     
-    print("RESULTS:")
-    print("-" * 60)
+    print("Results:")
     for p, q, description in test_cases:
         lca = lca_bst(root, p, q)
-        print(f"{description}: {lca.val}")
-    
-    print("\n" + "=" * 60)
-    print("COMPLEXITY ANALYSIS:")
-    print("-" * 60)
-    print("Time Complexity:  O(h) where h = height")
-    print("Space Complexity: O(h) for recursion stack")
-    print("\nFor balanced BST: h = log(n)")
-    print("For skewed BST:   h = n")
-    print("=" * 60)
+        print(f"  {description}: {lca.val}")
