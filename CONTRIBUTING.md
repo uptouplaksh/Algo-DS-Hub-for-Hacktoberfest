@@ -19,6 +19,10 @@ Pull requests submitted for issues that were not claimed or were assigned to som
     ```bash
     git clone [https://github.com/YOUR-USERNAME/Algo-DS-Hub-for-Hacktoberfest.git](https://github.com/YOUR-USERNAME/Algo-DS-Hub-for-Hacktoberfest.git)
     ```
+    Pro-Tip: After you clone your fork, it's a great practice to configure a remote that points back to our main repository. This allows you to keep your main branch in sync with the project. You can do this with the command:
+    ```bash
+    git remote add upstream https://github.com/uptouplaksh/Algo-DS-Hub-for-Hacktoberfest.git
+    ```
 
 4.  **Create a New Branch:** A dedicated branch for your feature is essential.
     ```bash
@@ -30,6 +34,19 @@ Pull requests submitted for issues that were not claimed or were assigned to som
     * Navigate to the correct directory based on our folder structure.
     * Create your file (e.g., `binary_search.py`).
     * Write your code. **Remember to add comments explaining the logic and the Time & Space Complexity.**
+
+    ### Using Templates
+
+    We provide boilerplate template files for each language in the `templates/` folder. 
+    Contributors are encouraged to use these templates as a starting point to ensure their code is properly formatted and includes docstrings/comments.
+
+    Available templates:
+
+    - Python: `templates/template.py`
+    - Java: `templates/template.java`
+    - JavaScript: `templates/template.js`
+    - C++: `templates/template.cpp`
+
 
 6.  **Commit Your Changes:** Make a clear and descriptive commit message.
     ```bash
@@ -68,3 +85,19 @@ Closes #17
 ## Review Process
 
 Please note that the project maintainer (@YourUsername) will be automatically added as a reviewer to all pull requests. We will do our best to review your contribution within 48 hours. Thank you for your patience!
+
+## Troubleshooting Failing Checks
+
+**"Q: I submitted a PR, but one of the automated checks failed with a red 'X'. What should I do?"**
+
+**A:** Don't worry! This can sometimes happen due to GitHub's security settings for repositories, and it's usually not a problem with your code.
+
+Here's what to do:
+
+1. **Don't panic.** This is a common issue, and it will not block your contribution from being merged if the code is good.  
+2. **Leave a comment.** Please leave a comment on your pull request and tag the maintainer (`@uptouplaksh`) to let them know. For example:  
+   > "@uptouplaksh The `auto-labeler` check failed. Can you please take a look?"  
+3. **Wait for the maintainer.** The maintainer can often fix the issue by manually re-running the job or by applying the labels themselves.
+
+As long as your code is high-quality and follows our guidelines, a failing automated check will not prevent your contribution from being accepted.
+
