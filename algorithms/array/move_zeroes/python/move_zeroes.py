@@ -1,5 +1,5 @@
 """
-move_zeroes.py
+Move Zeroes to the end of an array
 
 A Python program to move all zeroes in a list to the end
 while keeping the order of the other (non-zero) elements the same.
@@ -7,8 +7,8 @@ while keeping the order of the other (non-zero) elements the same.
 This operation is done in-place, meaning we modify the same list
 instead of creating a new one.
 
-Author: @uptouplaksh
-Date: 2025-10-09
+Time Complexity: O(n)
+Space Complexity: O(1)
 """
 
 def move_zeroes(nums):
@@ -26,26 +26,24 @@ def move_zeroes(nums):
     # but we cannot use extra space (like making a new list).
     # So we’ll do it in-place using one pointer.
 
-    # 'insert_pos' will keep track of the position
+    # 'nonzero_pos' will keep track of the position
     # where the next non-zero element should go.
-    insert_pos = 0
+    nonzero_pos = 0
 
-    # Loop through the list from start to end
+    # Traversing through all the elements
     for i in range(len(nums)):
         # If the current element is NOT zero,
-        # we place it at the current 'insert_pos' and move the pointer ahead.
+        # we place it at the current 'nonzero_pos' and move the pointer ahead.
         if nums[i] != 0:
             # Swap the non-zero element to its correct position.
-            # If 'i' and 'insert_pos' are the same, this swap does nothing.
-            nums[insert_pos], nums[i] = nums[i], nums[insert_pos]
+            # If 'i' and 'nonzero_pos' are the same, this swap does nothing.
+            nums[nonzero_pos], nums[i] = nums[i], nums[nonzero_pos]
 
-            # Move the 'insert_pos' forward for the next non-zero element.
-            insert_pos += 1
+            # Move the 'nonzero_pos' forward for the next non-zero element.
+            nonzero_pos += 1
 
     # When the loop finishes, all non-zero numbers are shifted to the front,
     # and all zeros are automatically moved to the back of the list.
-
-    # Note: We don’t need to return anything since we’re modifying the list itself.
 
 
 if __name__ == "__main__":
@@ -91,18 +89,3 @@ if __name__ == "__main__":
     print("After moving zeroes: ", arr5)
     print()
 
-"""
-🧠 Explanation Summary:
------------------------
-1️⃣ We maintain a pointer (insert_pos) to decide where to put the next non-zero.
-2️⃣ We scan each element:
-    - If non-zero → swap it to insert_pos, move insert_pos forward.
-    - If zero → skip it.
-3️⃣ At the end, all non-zeros are in front, and all zeros move behind automatically.
-
-⏱ Time Complexity: O(n)
-   → We visit each element once.
-
-💾 Space Complexity: O(1)
-   → We don't use extra memory (operation is done in-place).
-"""
