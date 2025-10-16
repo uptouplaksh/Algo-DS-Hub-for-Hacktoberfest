@@ -95,6 +95,13 @@ Thanks to all these amazing people for contributing to this project 💖
 		</tr>
 		<tr>
             <td align="center">
+                <a href="https://github.com/SajalGarg035">
+                    <img src="https://avatars.githubusercontent.com/u/164674816?v=4" width="100;" alt="SajalGarg035"/>
+                    <br />
+                    <sub><b>Sajal Garg</b></sub>
+                </a>
+            </td>
+            <td align="center">
                 <a href="https://github.com/amanvaibhav162">
                     <img src="https://avatars.githubusercontent.com/u/215270060?v=4" width="100;" alt="amanvaibhav162"/>
                     <br />
@@ -127,13 +134,6 @@ Thanks to all these amazing people for contributing to this project 💖
                     <img src="https://avatars.githubusercontent.com/u/146380217?v=4" width="100;" alt="psy-duck1"/>
                     <br />
                     <sub><b>Aaditya Agarwal</b></sub>
-                </a>
-            </td>
-            <td align="center">
-                <a href="https://github.com/SajalGarg035">
-                    <img src="https://avatars.githubusercontent.com/u/164674816?v=4" width="100;" alt="SajalGarg035"/>
-                    <br />
-                    <sub><b>Sajal Garg</b></sub>
                 </a>
             </td>
 		</tr>
